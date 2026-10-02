@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2026-10-02">
+
+<title>Indoor Temperature and Office Work Performance in a Temperate Climate</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="manuscript_files/libs/clipboard/clipboard.min.js"></script>
+<script src="manuscript_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="manuscript_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="manuscript_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="manuscript_files/libs/quarto-html/popper.min.js"></script>
+<script src="manuscript_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="manuscript_files/libs/quarto-html/anchor.min.js"></script>
+<link href="manuscript_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="manuscript_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="manuscript_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="manuscript_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="manuscript_files/libs/bootstrap/bootstrap-a74871fe4945b66d259aafc266475145.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+<link href="manuscript_files/libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+<script src="manuscript_files/libs/tabwid-1.1.3/tabwid.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#practice-relevance" id="toc-practice-relevance" class="nav-link" data-scroll-target="#practice-relevance">Practice relevance</a></li>
+  <li><a href="#keywords" id="toc-keywords" class="nav-link" data-scroll-target="#keywords">Keywords</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods"><span class="header-section-number">2</span> Methods</a>
+  <ul class="collapse">
+  <li><a href="#study-design-and-setting" id="toc-study-design-and-setting" class="nav-link" data-scroll-target="#study-design-and-setting"><span class="header-section-number">2.1</span> Study Design and Setting</a></li>
+  <li><a href="#sec-chamber" id="toc-sec-chamber" class="nav-link" data-scroll-target="#sec-chamber"><span class="header-section-number">2.2</span> Environmental Chamber</a></li>
+  <li><a href="#participants" id="toc-participants" class="nav-link" data-scroll-target="#participants"><span class="header-section-number">2.3</span> Participants</a>
+  <ul class="collapse">
+  <li><a href="#sample-size-and-statistical-power" id="toc-sample-size-and-statistical-power" class="nav-link" data-scroll-target="#sample-size-and-statistical-power"><span class="header-section-number">2.3.1</span> Sample Size and Statistical Power</a></li>
+  <li><a href="#eligibility-and-session-requirements" id="toc-eligibility-and-session-requirements" class="nav-link" data-scroll-target="#eligibility-and-session-requirements"><span class="header-section-number">2.3.2</span> Eligibility and Session Requirements</a></li>
+  <li><a href="#compensation" id="toc-compensation" class="nav-link" data-scroll-target="#compensation"><span class="header-section-number">2.3.3</span> Compensation</a></li>
+  </ul></li>
+  <li><a href="#measurements" id="toc-measurements" class="nav-link" data-scroll-target="#measurements"><span class="header-section-number">2.4</span> Measurements</a>
+  <ul class="collapse">
+  <li><a href="#environmental-conditions" id="toc-environmental-conditions" class="nav-link" data-scroll-target="#environmental-conditions"><span class="header-section-number">2.4.1</span> Environmental Conditions</a></li>
+  <li><a href="#subjective-assessments" id="toc-subjective-assessments" class="nav-link" data-scroll-target="#subjective-assessments"><span class="header-section-number">2.4.2</span> Subjective Assessments</a></li>
+  <li><a href="#physiological-measurements" id="toc-physiological-measurements" class="nav-link" data-scroll-target="#physiological-measurements"><span class="header-section-number">2.4.3</span> Physiological Measurements</a></li>
+  <li><a href="#sec-assessments" id="toc-sec-assessments" class="nav-link" data-scroll-target="#sec-assessments"><span class="header-section-number">2.4.4</span> Work-Performance Assessments</a></li>
+  </ul></li>
+  <li><a href="#sec-protocol" id="toc-sec-protocol" class="nav-link" data-scroll-target="#sec-protocol"><span class="header-section-number">2.5</span> Experimental Procedure</a></li>
+  <li><a href="#sec-methods-analysis" id="toc-sec-methods-analysis" class="nav-link" data-scroll-target="#sec-methods-analysis"><span class="header-section-number">2.6</span> Data Processing and Analysis</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><span class="header-section-number">3</span> Results</a>
+  <ul class="collapse">
+  <li><a href="#environmental-conditions-1" id="toc-environmental-conditions-1" class="nav-link" data-scroll-target="#environmental-conditions-1"><span class="header-section-number">3.1</span> Environmental Conditions</a></li>
+  <li><a href="#thermal-perception" id="toc-thermal-perception" class="nav-link" data-scroll-target="#thermal-perception"><span class="header-section-number">3.2</span> Thermal perception</a></li>
+  <li><a href="#office-work-performance" id="toc-office-work-performance" class="nav-link" data-scroll-target="#office-work-performance"><span class="header-section-number">3.3</span> Office work performance</a>
+  <ul class="collapse">
+  <li><a href="#cognitive-ability-test-cat" id="toc-cognitive-ability-test-cat" class="nav-link" data-scroll-target="#cognitive-ability-test-cat"><span class="header-section-number">3.3.1</span> Cognitive Ability Test (CAT)</a></li>
+  <li><a href="#pebl-test-battery" id="toc-pebl-test-battery" class="nav-link" data-scroll-target="#pebl-test-battery"><span class="header-section-number">3.3.2</span> PEBL Test Battery</a></li>
+  </ul></li>
+  <li><a href="#physiological-measurements-1" id="toc-physiological-measurements-1" class="nav-link" data-scroll-target="#physiological-measurements-1"><span class="header-section-number">3.4</span> Physiological measurements</a>
+  <ul class="collapse">
+  <li><a href="#hand-skin-temperature-and-heart-rate" id="toc-hand-skin-temperature-and-heart-rate" class="nav-link" data-scroll-target="#hand-skin-temperature-and-heart-rate"><span class="header-section-number">3.4.1</span> Hand skin temperature and heart rate</a></li>
+  <li><a href="#rmssd" id="toc-rmssd" class="nav-link" data-scroll-target="#rmssd"><span class="header-section-number">3.4.2</span> RMSSD</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">4</span> Discussion</a>
+  <ul class="collapse">
+  <li><a href="#limitations-and-outlook" id="toc-limitations-and-outlook" class="nav-link" data-scroll-target="#limitations-and-outlook"><span class="header-section-number">4.1</span> Limitations and outlook</a></li>
+  </ul></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions"><span class="header-section-number">5</span> Conclusions</a></li>
+  <li><a href="#data-availability" id="toc-data-availability" class="nav-link" data-scroll-target="#data-availability">Data availability</a></li>
+  <li><a href="#declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process" id="toc-declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process" class="nav-link" data-scroll-target="#declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process">Declaration of Generative AI and AI-assisted technologies in the writing process</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a>
+  <ul class="collapse">
+  
+  
+  
+  
+  </ul></li>
+  
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6</span> References</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="manuscript.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Indoor Temperature and Office Work Performance in a Temperate Climate</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 2, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="abstract" class="level1 unnumbered">
+<h1 class="unnumbered">Abstract</h1>
+<p>The relationship between indoor temperature and office work performance (OWP) remains contested despite decades of research. Recent laboratory studies, including a controlled experiment in Singapore, report limited or no effects within typical office ranges, but replication across climatic contexts is needed to assess generalizability. A within-subject study was conducted in the temperate climate of the San Francisco Bay Area, closely replicating the Singapore protocol with a 30% larger sample: seventy-five participants completed four 165-min sessions at 21°C, 23°C, 25°C, and 27°C in a controlled environmental chamber. Office work performance was assessed using a Cognitive Ability Test (CAT) and a battery of eight neuropsychological tests targeting five cognitive domains, alongside continuous physiological monitoring. Although participants preferred temperatures between 23–25°C, no statistically significant effect of temperature on cognitive ability or neuropsychological performance was found across the full sample; physiological measures and thermal perception varied with temperature as expected, but without accompanying changes in office work performance. Among the highest-performing quartile of CAT participants, a statistically significant, large-magnitude temperature-related effect was observed, though this pattern was not replicated in the neuropsychological battery. The findings closely align with the Singapore study and are consistent with the Maximal Adaptability Model, adding to the growing body of evidence supporting wider HVAC setpoint ranges. Findings should be interpreted in light of the short-term controlled exposure, the predominantly young and healthy sample, and the temperate-climate setting; longer-duration and more diverse study designs are needed.</p>
+</section>
+<section id="practice-relevance" class="level1 unnumbered">
+<h1 class="unnumbered">Practice relevance</h1>
+<p>Building managers, HVAC engineers, and sustainability practitioners face increasing pressure to reduce energy consumption from heating and cooling while maintaining occupant work performance; this study provides experimental evidence, replicating a prior controlled study in Singapore, that office work performance was not significantly impaired across a 21–27°C range in a temperate climate (San Francisco Bay Area). These findings suggest that modest upward adjustments to HVAC cooling setpoints within this range are unlikely to reduce cognitive output in typical office populations, supporting strategies that expand acceptable indoor temperature bands as a means of reducing energy usage. Decision-makers should note, however, that thermal comfort and satisfaction remain important even when performance is stable, and that these results are most applicable to temperate-climate offices with predominantly young, healthy workers performing structured task work; longer-duration exposure and more diverse occupant profiles warrant further investigation.</p>
+</section>
+<section id="keywords" class="level1 unnumbered">
+<h1 class="unnumbered">Keywords</h1>
+<p>Cognitive performance; Thermal comfort; Human subject experiment; Physiological measurements; HVAC design</p>
+</section>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Numerous studies have examined the influence of the thermal environment on cognitive functioning and office work performance (OWP), yet findings remain inconsistent. At temperatures well outside typical indoor ranges, performance impairment is widely documented <span class="citation" data-cites="zhangEffectsModerateThermal2019">(<a href="#ref-zhangEffectsModerateThermal2019" role="doc-biblioref">Zhang et al., 2019</a>)</span>. Within the range typically found in mechanically conditioned offices, however, the evidence is mixed. Several laboratory and field studies have reported measurable effects: <span class="citation" data-cites="tanabeIndoorTemperatureProductivity2007">Tanabe et al. (<a href="#ref-tanabeIndoorTemperatureProductivity2007" role="doc-biblioref">2007</a>)</span> found inconsistent effects of moderately elevated temperature (up to 33°C) across task types; <span class="citation" data-cites="maulaEffectSlightlyWarm2016">Maula et al. (<a href="#ref-maulaEffectSlightlyWarm2016" role="doc-biblioref">2016</a>)</span> observed a significant decrement on a working-memory task at 29°C compared with 23°C, while other administered tasks were unaffected; and <span class="citation" data-cites="lanCognitivePerformanceWas2022">Lan et al. (<a href="#ref-lanCognitivePerformanceWas2022" role="doc-biblioref">2022</a>)</span> reported reduced cognitive performance across a 24–28°C range even with thermal comfort actively held constant. <span class="citation" data-cites="gengImpactThermalEnvironment2017">Geng et al. (<a href="#ref-gengImpactThermalEnvironment2017" role="doc-biblioref">2017</a>)</span> similarly tested a wider 16–28°C range and found performance highest under neutral-to-slightly-cool conditions, declining toward both extremes.</p>
+<p>In contrast, other studies have found little or no effect within typical indoor ranges. A meta-analysis of 35 studies by <span class="citation" data-cites="porras-salazarMetaanalysis35Studies2021">Porras-Salazar et al. (<a href="#ref-porras-salazarMetaanalysis35Studies2021" role="doc-biblioref">2021</a>)</span> concluded that there is no reliable temperature–performance relationship in the 20–30°C range, and that existing empirical models have low predictive accuracy and are based on limited participant samples. <span class="citation" data-cites="linEffectsTemperatureWork2025">Lin et al. (<a href="#ref-linEffectsTemperatureWork2025" role="doc-biblioref">2025</a>)</span> found in a recent review that effects may be more pronounced for tasks with higher cognitive demand, but that the overall evidence base remains heterogeneous.</p>
+<p>Together, these inconsistencies suggest that the relationship between indoor temperature and OWP is task-, context-, and population-dependent, and that methodological heterogeneity, such as sample characteristics, task types, exposure duration, and the degree of environmental control, likely contributes to the variability across studies <span class="citation" data-cites="zhangEffectsModerateThermal2019">(<a href="#ref-zhangEffectsModerateThermal2019" role="doc-biblioref">Zhang et al., 2019</a>)</span>.</p>
+<p>A recent study conducted by <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">Porras-Salazar et al. (<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">2024</a>)</span> in Singapore sought to address several of these limitations by evaluating temperature effects on OWP within a controlled experimental setting and by employing a structured set of cognitive performance assessments. Contrary to other work suggesting measurable decrements in performance with increasing deviation from thermally comfortable conditions <span class="citation" data-cites="lanCognitivePerformanceWas2022 linEffectsTemperatureWork2025">(<a href="#ref-lanCognitivePerformanceWas2022" role="doc-biblioref">Lan et al., 2022</a>; <a href="#ref-linEffectsTemperatureWork2025" role="doc-biblioref">Lin et al., 2025</a>)</span>, the Singapore study did not find conclusive evidence that OWP was affected by temperature within the typical ranges in office buildings.</p>
+<p>Two constraints of the Singapore study limit the broader generalization of its results: the sample size (n = 58, large compared to typical studies, but still small to be generalizable) and the specificity of the climatic and cultural context in which it was conducted. Thermal expectations, acclimatization patterns, and building operation practices differ substantially between tropical and temperate regions, and these factors may influence both thermal experience and performance outcomes <span class="citation" data-cites="humphreysOutdoorTemperaturesComfort1978 xiongMeasuringWhatMatters2026">(<a href="#ref-humphreysOutdoorTemperaturesComfort1978" role="doc-biblioref">Humphreys, 1978</a>; <a href="#ref-xiongMeasuringWhatMatters2026" role="doc-biblioref">Xiong et al., 2026</a>)</span>. Additional evidence from temperate office environments is therefore needed to evaluate whether the absence of strong temperature effects reflects a broader pattern or is specific to the conditions and the original participant sample. Independent replication is valuable in its own right and strengthens confidence in single-study findings <span class="citation" data-cites="schmidtShallWeReally2009">Popper (<a href="#ref-popperLogicScientificDiscovery2002" role="doc-biblioref">2002</a>)</span>, particularly given the policy relevance of temperature–performance research for HVAC design and energy management <span class="citation" data-cites="porras-salazarMetaanalysis35Studies2021">(<a href="#ref-porras-salazarMetaanalysis35Studies2021" role="doc-biblioref">Porras-Salazar et al., 2021</a>)</span>.</p>
+<p>The present study replicates the Singapore experiment in the temperate climate of the San Francisco Bay Area with a substantially larger sample and a practically identical protocol, enabling direct comparison across climatic, building, and cultural contexts. Grounded in the Maximal Adaptability Model <span class="citation" data-cites="hancockDynamicModelStress1989">(<a href="#ref-hancockDynamicModelStress1989" role="doc-biblioref">Hancock, 1989</a>)</span>, which suggests that individuals can maintain cognitive performance within an adaptive zone despite physiological thermal stress, this study evaluates whether the tested 21–27°C range falls within that zone, whether indoor temperature within it affects short-term cognitive performance, and whether physiological responses and thermal comfort shift with temperature even when cognition does not. It also asks whether the null performance effects reported by <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">Porras-Salazar et al. (<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">2024</a>)</span> replicate in a different climatic and cultural context with a larger sample.</p>
+</section>
+<section id="sec-methods" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Methods</h1>
+<section id="study-design-and-setting" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="study-design-and-setting"><span class="header-section-number">2.1</span> Study Design and Setting</h2>
+<p>The experiment was carried out at the Center for the Built Environment at the University of California, Berkeley, between March and July 2025. During this period, typical daytime maximum outdoor temperatures ranged from 16 to 22°C (10<sup>th</sup> to 90<sup>th</sup> percentile) <span class="citation" data-cites="NOAA_NWS_SF_Climate_2025">(<a href="#ref-NOAA_NWS_SF_Climate_2025" role="doc-biblioref">NOAA, 2025</a>)</span>.</p>
+<p>A total of 84 participants were recruited to attend four sessions and complete two types of cognitive performance assessments under air temperatures of 21°C, 23°C, 25°C, and 27°C. These temperatures were selected to represent typical indoor conditions in the United States. Following the approach used in the original study <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">(<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">Porras-Salazar et al., 2024</a>)</span>, indoor temperature data for U.S. office buildings were extracted from the ASHRAE Global Thermal Comfort Database II <span class="citation" data-cites="foldvarylicinaDevelopmentASHRAEGlobal2018">(<a href="#ref-foldvarylicinaDevelopmentASHRAEGlobal2018" role="doc-biblioref">Földváry Ličina et al., 2018</a>)</span>. Observations with thermal sensation votes between –1.5 and 1.5 were retained, and the 10<sup>th</sup>, 25<sup>th</sup>, 50<sup>th</sup>, 75<sup>th</sup>, and 90<sup>th</sup> percentiles were calculated. The resulting values (21.4°C, 22.4°C, 23.4°C, 24.8°C, 27.2°C) led to the selection of the four given temperature set points for the experimental conditions. For the remainder of this paper, these conditions are referred to as “session types” with the following labels: <em>21C</em>, <em>23C</em>, <em>25C</em> and <em>27C</em>.</p>
+<p>To reduce learning effects associated with the work-performance tests, each participant was randomly assigned a unique session order. The distribution of orders (maximum of 24 different combinations) was balanced across all participants (see <a href="#tbl-order-combined" class="quarto-xref">Table&nbsp;6</a> in the Appendix), who were then asked to schedule their sessions in the required sequence.</p>
+</section>
+<section id="sec-chamber" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="sec-chamber"><span class="header-section-number">2.2</span> Environmental Chamber</h2>
+<p>All sessions were conducted in an environmental control chamber at the Center for the Built Environment, UC Berkeley. The chamber measures 5 × 5 × 2.5 m and replicates a small office environment <span class="citation" data-cites="baumanDevelopmentControlledEnvironment1988">(<a href="#ref-baumanDevelopmentControlledEnvironment1988" role="doc-biblioref">Bauman &amp; Arens, 1988</a>)</span>. The chamber incorporates an actively conditioned annular cavity surrounding the test space, enabling independent regulation of window surface temperatures and spatial radiant conditions. For this experiment, it could host up to six participants at the same time, each seated at a workstation equipped with a desk, office chair, laptop, and a mouse. <a href="#fig-layout-protocol" class="quarto-xref">Figure&nbsp;1</a> in <a href="#sec-protocol" class="quarto-xref">Section&nbsp;2.5</a> shows the room layout in more detail.</p>
+<p>A dedicated air-handling unit supplied conditioned air through a variable-air-volume system with fixed ceiling-diffuser terminal positions, keeping ventilation rates constant while supply air temperature was adjusted to maintain the indoor set points. To avoid radiant asymmetry and provide a homogeneous thermal environment, radiant ceiling panels were operated at the same set point temperatures as the VAV system. Other environmental parameters were kept as constant as possible across conditions: relative humidity was maintained at 50–55%, air speeds were kept below 0.1 m/s, and artificial lighting was used only when daylight levels were insufficient to maintain 500 lux. CO<sub>2</sub> concentration was monitored continuously, including during and after participant breaks, and kept at near-ambient levels through constant supply of fresh air via mechanical ventilation (see <a href="#tbl-env" class="quarto-xref">Table&nbsp;2</a>).</p>
+</section>
+<section id="participants" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="participants"><span class="header-section-number">2.3</span> Participants</h2>
+<p>In total, 84 healthy adults who attended at least one experimental session were recruited through flyers, emails, and a campus-wide online recruitment system. Seventy-five participants attended all four sessions and self-reported their sex prior to the study. Demographic characteristics are summarized in <a href="#tbl-demographics" class="quarto-xref">Table&nbsp;1</a>. For the statistical analysis (<a href="#sec-methods-analysis" class="quarto-xref">Section&nbsp;2.6</a>), only data from this subset of participants were used.</p>
+<div class="cell">
+<div id="tbl-demographics" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-demographics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Summary of demographic information (mean ± SD) on 75 study participants who attended all four conditions.
+</figcaption>
+<div aria-describedby="tbl-demographics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 13%">
+<col style="width: 19%">
+<col style="width: 12%">
+<col style="width: 13%">
+<col style="width: 13%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sex</th>
+<th style="text-align: right;">No.&nbsp;Participants</th>
+<th style="text-align: left;">Age [a]</th>
+<th style="text-align: left;">Height [m]</th>
+<th style="text-align: left;">Weight [kg]</th>
+<th style="text-align: left;">Body Mass Index (BMI)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">all</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: left;">25.9 ± 7.3</td>
+<td style="text-align: left;">1.66 ± 0.11</td>
+<td style="text-align: left;">68.8 ± 11.8</td>
+<td style="text-align: left;">25.1 ± 4.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">female</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: left;">25.3 ± 7.9</td>
+<td style="text-align: left;">1.60 ± 0.07</td>
+<td style="text-align: left;">64.4 ± 11.7</td>
+<td style="text-align: left;">25.2 ± 4.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">male</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: left;">26.7 ± 6.8</td>
+<td style="text-align: left;">1.72 ± 0.10</td>
+<td style="text-align: left;">73.3 ± 10.2</td>
+<td style="text-align: left;">24.9 ± 4.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">unspecified</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">22.5 ± 0.7</td>
+<td style="text-align: left;">1.65 ± 0.00</td>
+<td style="text-align: left;">75.0 ± 9.9</td>
+<td style="text-align: left;">27.5 ± 3.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<section id="sample-size-and-statistical-power" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="sample-size-and-statistical-power"><span class="header-section-number">2.3.1</span> Sample Size and Statistical Power</h3>
+<p>The target sample size was set at approximately 30% larger than the Singapore experiment (n = 58) to improve statistical power and the precision of effect size estimates. An a priori power analysis confirmed adequate statistical sensitivity for the within-subjects design. A intraclass correlation coefficient (ICC = 0.75) estimated from the linear mixed-effects model reflects the high between-participant consistency in CAT scores. Applying the corresponding within-subjects non-centrality parameter (see <a href="#eq-lambda" class="quarto-xref">Equation&nbsp;1</a>), the design provided 84.1% power at α = 0.05 to detect an effect as small as ηp² = 0.01 (Cohen’s f = 0.101). This exceeds the conventional 80% criterion.</p>
+<p><span id="eq-lambda"><span class="math display">\[
+\lambda = \frac{n \cdot k \cdot f^2}{1 - ICC}
+\tag{1}\]</span></span></p>
+</section>
+<section id="eligibility-and-session-requirements" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="eligibility-and-session-requirements"><span class="header-section-number">2.3.2</span> Eligibility and Session Requirements</h3>
+<p>All materials and tests were in English, so sufficient English proficiency was a strict requirement. All participants provided written informed consent prior to enrolment. Before the experimental sessions, participants attended an onboarding meeting where they were able to practice the cognitive tests and learned how the physiological equipment would be attached and used.</p>
+<p>Participants self-reported the absence of chronic cardiovascular or respiratory conditions, major surgeries within the past year, and sleep disorders. They had all lived in the San Francisco Bay Area for at least six months. No medical examinations were conducted. Participants were instructed to avoid alcohol or drug use for 24 hours before each session, sleep adequately, and refrain from vigorous exercise or smoking for at least one hour before arrival. Participants were also asked to wear the same type of clothing at every session: a short-sleeved shirt or blouse, lightweight long trousers, socks, and closed shoes. This corresponds to an estimated clothing insulation level of 0.6 clo (including the chair) and typical office attire in the region. Compliance with these requirements was self-reported at arrival. Participants who did not meet the protocol conditions (for example, incorrect clothing) were asked to return on a later date.</p>
+</section>
+<section id="compensation" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="compensation"><span class="header-section-number">2.3.3</span> Compensation</h3>
+<p>Participants were compensated with hourly gift vouchers and received performance and completion bonuses to encourage consistent attendance and effort, with participants scoring in the top 20% across all cognitive performance tests receiving additional bonus prize payments ranging from US$150 to US$30 depending on their results. Performance-based incentives were used intentionally as an analogue for the motivational factors (intrinsic interest, professional expectations, career consequences) that shape effort in real office settings, consistent with established practice in experimental psychology research on motivated performance <span class="citation" data-cites="bonnerEffectsMonetaryIncentives2002">(<a href="#ref-bonnerEffectsMonetaryIncentives2002" role="doc-biblioref">Bonner &amp; Sprinkle, 2002</a>)</span>.</p>
+</section>
+</section>
+<section id="measurements" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="measurements"><span class="header-section-number">2.4</span> Measurements</h2>
+<section id="environmental-conditions" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="environmental-conditions"><span class="header-section-number">2.4.1</span> Environmental Conditions</h3>
+<p>The physical environment was monitored continuously at 1-minute intervals using a sensor mast located at the room center (air temperature and air speed at four heights: 0.1 m, 0.6 m, 1.1 m, and 1.7 m) and two Atmocube IEQ monitoring units placed at representative desk locations (air temperature, relative humidity, CO<sub>2</sub>, particulate matter, light intensity, and background noise). Records of the chamber’s temperature thermostat were also exported. Full instrument models and accuracy specifications are provided in the Appendix (“Instrumentation”).</p>
+<p>Air temperature was controlled to remain within ±0.5°C of the set point in all conditions while maintaining the other parameters within narrow ranges. The mean CO<sub>2</sub> stayed below 580 ppm, indicating that the room was abundantly ventilated.</p>
+<div class="cell">
+<div id="tbl-env" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-env-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Mean values for key environmental parameters measured during sessions measured at 1.1m height; temperature measurements are averages from the central-mast sensor and the two Atmocube units (standard deviation in brackets).
+</figcaption>
+<div aria-describedby="tbl-env-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Session</th>
+<th style="text-align: left;">T<sub>air</sub> [°C]</th>
+<th style="text-align: left;">RH [%]</th>
+<th style="text-align: left;">CO<sub>2</sub> [ppm]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">21C</td>
+<td style="text-align: left;">21.3 (0.1)</td>
+<td style="text-align: left;">54.2 (3.1)</td>
+<td style="text-align: left;">576 (65)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">23C</td>
+<td style="text-align: left;">23.2 (0.1)</td>
+<td style="text-align: left;">53.0 (0.9)</td>
+<td style="text-align: left;">569 (56)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">25C</td>
+<td style="text-align: left;">25.0 (0.1)</td>
+<td style="text-align: left;">51.0 (2.5)</td>
+<td style="text-align: left;">572 (48)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">27C</td>
+<td style="text-align: left;">26.9 (0.1)</td>
+<td style="text-align: left;">49.5 (4.0)</td>
+<td style="text-align: left;">566 (68)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="subjective-assessments" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="subjective-assessments"><span class="header-section-number">2.4.2</span> Subjective Assessments</h3>
+<p>At their first visit, participants completed an onboarding questionnaire that included demographics, self-reported health patterns, the Highly Sensitive Person scale <span class="citation" data-cites="aronSensoryProcessingSensitivityIts1997">(<a href="#ref-aronSensoryProcessingSensitivityIts1997" role="doc-biblioref">Aron &amp; Aron, 1997</a>)</span>, the Satisfaction with Life Scale <span class="citation" data-cites="dienerSatisfactionLifeScale1985">(<a href="#ref-dienerSatisfactionLifeScale1985" role="doc-biblioref">Diener et al., 1985</a>)</span>, and the Ten-Item Personality Inventory <span class="citation" data-cites="goslingVeryBriefMeasure2003">(<a href="#ref-goslingVeryBriefMeasure2003" role="doc-biblioref">Gosling et al., 2003</a>)</span>.</p>
+<p>During each experimental session, participants completed short questionnaires at four time points spaced across the protocol (see Experimental Procedure). The questionnaire content followed the same structure described by <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">Porras-Salazar et al. (<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">2024</a>)</span> and is available in the public repository associated with that publication. All questionnaires were administered online via Qualtrics.</p>
+</section>
+<section id="physiological-measurements" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="physiological-measurements"><span class="header-section-number">2.4.3</span> Physiological Measurements</h3>
+<p>Dorsal skin temperature and heart activity were monitored continuously. For skin temperature, iButton sensors (DS1923, USA, 20°C to 85°C, accuracy: ±0.1°C, resolution: 0.0625°C) were attached to the back of the non-dominant hand using medical tape and data were logged at 1-minute intervals. In addition, heart rate and heart rate variability were measured using the Polar H10 (Polar Electro Oy, Finland) chest strap paired with the Elite HRV app. Participants wore the strap in direct contact with the skin. Raw RR interval data were extracted and used to calculate heart rate (HR), heart rate variability (HRV) and Root Mean Square of Successive Differences (RMSSD). HR and RMSSD served as indices of autonomic and parasympathetic activity, respectively <span class="citation" data-cites="shafferOverviewHeartRate2017">(<a href="#ref-shafferOverviewHeartRate2017" role="doc-biblioref">Shaffer &amp; Ginsberg, 2017</a>)</span>.</p>
+</section>
+<section id="sec-assessments" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="sec-assessments"><span class="header-section-number">2.4.4</span> Work-Performance Assessments</h3>
+<p>Cognitive performance was assessed using two types of tests. The first was a neuropsychological assessment using eight tests from the PEBL Psychological Test Battery, a validated open-source platform with established psychometric properties <span class="citation" data-cites="muellerPsychologyExperimentBuilding2014">(<a href="#ref-muellerPsychologyExperimentBuilding2014" role="doc-biblioref">Mueller &amp; Piper, 2014</a>)</span>, measuring performance across five cognitive domains: Working Memory, Executive Function, Attention, Processing Speed, and Decision Making. Participants completed this test battery twice during each session (see Experimental Procedure for timing). <a href="#tbl-cognitive-domains" class="quarto-xref">Table&nbsp;3</a> provides an overview of the cognitive domains, applied tests from the PEBL battery, and primary outcome metrics used in this study. Each individual paradigm employed is independently validated across neuropsychological literature <span class="citation" data-cites="shermanCompendiumNeuropsychologicalTests2022 LezakMurielDeutsch2012Na diamond2013">(<a href="#ref-diamond2013" role="doc-biblioref">Diamond &amp; Fiske, 2013</a>; <a href="#ref-LezakMurielDeutsch2012Na" role="doc-biblioref">Lezak, 2012</a>; <a href="#ref-shermanCompendiumNeuropsychologicalTests2022" role="doc-biblioref">Sherman et al., 2022</a>)</span>.</p>
+<div class="cell">
+<div id="tbl-cognitive-domains" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cognitive-domains-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Cognitive domains assessed with PEBL test battery and sorted in the order in which they were completed.
+</figcaption>
+<div aria-describedby="tbl-cognitive-domains-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 37%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Test</th>
+<th style="text-align: left;">Cognitive Domain</th>
+<th style="text-align: left;">Test Metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Berg Card Sorting Test (BCST)</td>
+<td style="text-align: left;">Executive Function</td>
+<td style="text-align: left;">Perseverative errors, Trials</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Corsi Blocks</td>
+<td style="text-align: left;">Working Memory</td>
+<td style="text-align: left;">Span, Correct trials</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Flanker Task</td>
+<td style="text-align: left;">Attention</td>
+<td style="text-align: left;">Response time, Accuracy</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Match-to-Sample</td>
+<td style="text-align: left;">Attention</td>
+<td style="text-align: left;">Response time, Accuracy, Errors</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Paired Associates</td>
+<td style="text-align: left;">Working Memory</td>
+<td style="text-align: left;">Correct responses, Errors</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tower of London (ToL)</td>
+<td style="text-align: left;">Executive Function</td>
+<td style="text-align: left;">Moves, Time</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Trail Making (Simple + Mixed)</td>
+<td style="text-align: left;">Processing Speed / Executive Function</td>
+<td style="text-align: left;">Time, Clicks</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Balloon Analog Risk Task (BART)</td>
+<td style="text-align: left;">Decision Making</td>
+<td style="text-align: left;">Mean/Total pumps</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Descriptions of each PEBL subtest are provided in the Appendix (“PEBL Test Descriptions”), with full methodological descriptions also available in <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">Porras-Salazar et al. (<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">2024</a>)</span>. Participants could exit individual tests before completion. Any run with fewer than 80% of expected responses was excluded from analysis, as described in <a href="#sec-methods-analysis" class="quarto-xref">Section&nbsp;2.6</a>.</p>
+<p>For the second type of assessment, participants completed a Cognitive Ability Test (CAT) similar to the Wonderlic assessment <span class="citation" data-cites="hunterWonderlicScholasticLevel1989">(<a href="#ref-hunterWonderlicScholasticLevel1989" role="doc-biblioref">Hunter, 1989</a>)</span>, which included 50 multiple-choice questions to be answered within 12 minutes. The questions covered numerical reasoning (~40%), logic and deductive reasoning (~20%), verbal reasoning (~26%), and general knowledge (~14%). Participants could use pen and paper but not calculators and could work on the question without following a specific order. Participants completed the CAT once per session.</p>
+</section>
+</section>
+<section id="sec-protocol" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sec-protocol"><span class="header-section-number">2.5</span> Experimental Procedure</h2>
+<p>A repeated-measures design was used. Each participant was exposed to all four temperature conditions and served as their own control. Two sessions per day were conducted, starting at either 9:00 AM or 2:00 PM, from Monday through Friday. Participants could attend sessions at different times of day, the time of day was therefore a potential source of within-person variability. However, because the session order, and with it the association between any given temperature condition and time of day, was fully counterbalanced across participants, no temperature condition was systematically over-represented in morning or afternoon slots at the group level, making systematic confounding by time of day unlikely. An overview of the session order distribution is provided in <a href="#tbl-order-combined" class="quarto-xref">Table&nbsp;6</a> in the Appendix.</p>
+<p>Participants were asked to schedule sessions according to their assigned exposure order, but were otherwise given flexibility to attend sessions whenever their schedule allowed. The only firm constraint was that no two sessions could be completed on the same calendar day. Most participants completed all four sessions within a time frame of two weeks, although some needed slightly longer because of short study breaks due to holidays and exam periods. Each session lasted 165 minutes. Participants arrived 15 minutes early to attach the heart-rate strap and skin temperature sensors.</p>
+<p>Each participant followed their own schedule and began a 30-minute acclimatization period once seated in the chamber. During this time, participants sat quietly at their workstations and no structured tasks were assigned; they were free to read or use their phone, but no work or cognitive tasks were given. Since <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">Porras-Salazar et al. (<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">2024</a>)</span> observed a lack of acclimatization, for this study, the acclimatization period was extended by 15 minutes relative to the original protocol. After the acclimatization period, participants completed three testing blocks separated by 15-minute breaks. Participants could drink water or leave the room for up to five minutes during breaks; those who exited were required to wait 15 minutes before starting the next block.</p>
+<div id="fig-layout-protocol" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-layout-protocol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/chamber-layout_protocol.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-layout-protocol-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: (a) CBE Environmental Control Chamber layout; and (b) experimental protocol.
+</figcaption>
+</figure>
+</div>
+<p>Participants completed questionnaires at four points across the protocol: at arrival (“Start”), after the first test block (“Intermediate 1”), after the second test block (“Intermediate 2”), and at the end of the session (“End”). They completed the PEBL Test Battery twice, at the beginning and end of the session (Block I and III), and the CAT once, during the middle block (Block II). The test order remained the same for all participants across all sessions. The experimental protocol was approved by the Committee for the Protection of Human Subjects of the University of California, Berkeley (CPHS 2024-11-18013).</p>
+</section>
+<section id="sec-methods-analysis" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="sec-methods-analysis"><span class="header-section-number">2.6</span> Data Processing and Analysis</h2>
+<p>All raw environmental, physiological, and cognitive performance data were imported and organized using <em>Python</em> and the <em>pandas</em> <span class="citation" data-cites="mckinneyPython2018">(<a href="#ref-mckinneyPython2018" role="doc-biblioref">McKinney, 2018</a>)</span> library. Separate data streams were merged using the session ID, participant ID, and datetime information.</p>
+<p>For statistical analysis, only participants who completed all four sessions were included (n = 75), since the repeated-measures ANOVA requires a fully balanced design. The statistical analysis was performed in <em>R</em> using the <em>tidyverse</em> <span class="citation" data-cites="Wickham2019-tidyverse">(<a href="#ref-Wickham2019-tidyverse" role="doc-biblioref">Wickham et al., 2019</a>)</span> and <em>rstatix</em> <span class="citation" data-cites="kassambaraRstatix2023">(<a href="#ref-kassambaraRstatix2023" role="doc-biblioref">Kassambara, 2023</a>)</span> packages. All visualizations were generated using <em>ggplot2</em> <span class="citation" data-cites="wickhamGgplot2ElegantGraphics2016">(<a href="#ref-wickhamGgplot2ElegantGraphics2016" role="doc-biblioref">Wickham, 2016</a>)</span>. For all repeated-measures ANOVAs, sphericity was assessed using Mauchly’s test and Greenhouse-Geisser corrections were applied when sphericity was violated (p &lt; 0.05). Partial eta-squared (ηp²) is reported as the measure of effect size, using the thresholds originally proposed by <span class="citation" data-cites="cohenStatisticalPowerAnalysis1988">Cohen (<a href="#ref-cohenStatisticalPowerAnalysis1988" role="doc-biblioref">1988</a>)</span>: ηp² &lt; 0.01 as negligible, 0.01–0.06 as small, 0.06–0.14 as medium, and &gt; 0.14 as large.</p>
+<p>To complement null hypothesis significance testing and properly characterise null results, equivalence tests were conducted for primary cognitive outcomes using the omnibus F-test approach, an ANOVA-based generalisation of the two one-sided tests (TOST) procedure <span class="citation" data-cites="campbellCanWeDisregard2021">(<a href="#ref-campbellCanWeDisregard2021" role="doc-biblioref">Campbell &amp; Lakens, 2021</a>)</span>. The equivalence bound was set at ηp² = 0.01, consistent with the <span class="citation" data-cites="cohenStatisticalPowerAnalysis1988">Cohen (<a href="#ref-cohenStatisticalPowerAnalysis1988" role="doc-biblioref">1988</a>)</span> negligible-effect threshold and the smallest effect size that the Singapore study was designed to detect <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">(<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">Porras-Salazar et al., 2024</a>)</span>. Thermal perception responses (sensation, preference, and acceptability) are ordinal and were therefore analysed using Friedman tests with Bonferroni-corrected post-hoc pairwise comparisons. As a sensitivity check, the primary CAT analysis was also repeated using a linear mixed-effects model with a random intercept per participant (<em>lmerTest</em> package <span class="citation" data-cites="kuznetsovaLmerTestPackageTests2017">(<a href="#ref-kuznetsovaLmerTestPackageTests2017" role="doc-biblioref">Kuznetsova et al., 2017</a>)</span>; Satterthwaite degrees of freedom).</p>
+<p>To account for missing or incomplete data arising from technical issues or participants inadvertently exiting tests early, the following inclusion criteria were applied: For the CAT test, only fully completed samples were included. For the PEBL battery, which required participants to complete two rounds (Block I and Block III) with multiple runs per test, data from a session were included if at least one complete round was finished. A test was considered complete if the participant finished at least 50% of the standard number of runs (e.g., a minimum of 2 out of 3 required runs), and a run was counted as complete if it contained at least 80% of the expected responses. Overall, missing and incomplete data were minimal, with only 0.3 % of runs affected. On three occasions, participants were mistakenly administered the CAT form from an earlier session rather than the form intended for that session, meaning they had already seen the questions; these sessions’ CAT scores were therefore excluded from analysis.</p>
+</section>
+</section>
+<section id="results" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Results</h1>
+<section id="environmental-conditions-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="environmental-conditions-1"><span class="header-section-number">3.1</span> Environmental Conditions</h2>
+<p><a href="#tbl-env" class="quarto-xref">Table&nbsp;2</a> summarizes the environmental conditions for each session type; values represent session means at 1.1 m height, the standard reference height for the occupied zone, averaged from the central-mast sensor and the two Atmocube units. Air temperature was maintained within ±0.5°C of each target set point throughout the study. Because the chamber’s actively conditioned annular cavity and ceiling-mounted radiant panels operated at the same set point as the air, window and surface temperatures closely tracked air temperature, allowing air temperature, mean radiant temperature, and operative temperature to be used interchangeably for interpretation <span class="citation" data-cites="daweComparisonMeanRadiant2020">(<a href="#ref-daweComparisonMeanRadiant2020" role="doc-biblioref">Dawe et al., 2020</a>)</span>. Relative humidity, CO<sub>2</sub>, and other monitored variables also remained within their prescribed ranges across all four session types.</p>
+</section>
+<section id="thermal-perception" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="thermal-perception"><span class="header-section-number">3.2</span> Thermal perception</h2>
+<p>Each of the four questionnaires outlined in the protocol graphic (<a href="#fig-layout-protocol" class="quarto-xref">Figure&nbsp;1</a>) contained a set of questions targeting thermal perception. These included questions on (a) thermal sensation, (b) thermal preference, and (c) thermal acceptability, and used the ordinal scales recommended in ASHRAE 55 <span class="citation" data-cites="ashraeANSIASHRAEStandard2023">(<a href="#ref-ashraeANSIASHRAEStandard2023" role="doc-biblioref">ASHRAE, 2023</a>)</span>. This generated up to 300 responses per question and condition (75 participants × 4 questionnaire time-points per session).</p>
+<p>Thermal responses across the four temperature conditions showed a consistent progression in sensation, preference, and acceptability (<a href="#fig-thermal-perception" class="quarto-xref">Figure&nbsp;2</a>). At 21°C, participants predominantly reported <em>slightly cool</em> and <em>cool</em> sensations, with a clear preference for <em>warmer</em> conditions (52%), though acceptability remained largely positive. At 23°C, sensations shifted toward <em>neutral</em> and most participants preferred <em>no change</em> (58%), indicating that this condition was close to thermal neutrality, with acceptability reaching its highest levels (<em>very acceptable</em>: 49%). At 25°C, sensations spread across <em>neutral</em>, <em>slightly warm</em>, and <em>slightly cool</em>, with preference still dominated by <em>no change</em> but an emerging tendency toward <em>cooler</em>; acceptability remained high. By 27°C, sensations shifted clearly toward the warm side, most participants preferred the environment <em>cooler</em> (64%), and acceptability decreased, with notable increases in unacceptable ratings. Overall, the three constructs followed a coherent pattern: participants felt predominantly too cool at 21°C, near neutral around 23–25°C, and mostly too warm at 27°C, with preference and acceptability shifting accordingly. This convergence across sensation, preference, and acceptability indicates a consistent range of thermal comfort centered between approximately 23°C and 25°C.</p>
+<p>Friedman tests confirmed statistically significant effects of temperature on all three perception measures. Thermal sensation showed the strongest concordance (χ²(3) = 167.18, p &lt; 0.001, Kendall’s W = 0.774), with all six pairwise comparisons between conditions differing significantly after Bonferroni correction (all p<sub>adj</sub> &lt; 0.001). Thermal preference showed similarly strong agreement (χ²(3) = 131.88, p &lt; 0.001, W = 0.611), again with all pairs distinguishable. Thermal acceptability also differed significantly across conditions (χ²(3) = 30.31, p &lt; 0.001, W = 0.144), though with weaker overall concordance. Post-hoc comparisons indicated that 27°C was rated significantly less acceptable than 23°C and 25°C, and 23°C was rated more acceptable than 21°C, while differences between 21°C and 25°C and between 23°C and 25°C were not significant, meaning they offered roughly equivalent, high levels of acceptability.</p>
+<div id="fig-thermal-perception" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-thermal-perception-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/thermal_perception.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-thermal-perception-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Distribution of survey responses to thermal perception across experimental conditions: (a) thermal sensation (Friedman χ²(3) = 167.18, p &lt; 0.001), (b) thermal preference (χ²(3) = 131.88, p &lt; 0.001), and (c) thermal acceptability (χ²(3) = 30.31, p &lt; 0.001).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="office-work-performance" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="office-work-performance"><span class="header-section-number">3.3</span> Office work performance</h2>
+<section id="cognitive-ability-test-cat" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="cognitive-ability-test-cat"><span class="header-section-number">3.3.1</span> Cognitive Ability Test (CAT)</h3>
+<p>Overall cognitive performance was assessed using the Cognitive Ability Test (CAT). As shown in Figure <a href="#fig-cat" class="quarto-xref">Figure&nbsp;3</a> (a), average CAT scores for the full sample were broadly similar across the four temperature conditions, ranging from 46.8 to 50.1 points. Participants performed best, on average, in the 21C condition (mean = 50.1, SD = 17.3) and lowest in 27C (mean = 46.8, SD = 15.9). The remaining conditions fell between these values, with no clear monotonic trend. A repeated-measures ANOVA supported this visual impression, indicating no statistically significant effect of temperature on CAT performance within the examined temperature range (F(3, 213) = 2.036, p = 0.11, ηp² = 0.028). Because a non-significant result alone cannot establish the absence of an effect, an equivalence test was also conducted. It indicated that the observed effect could not be characterised as practically negligible at the previously specified bound (ηp² = 0.01; p<sub>equiv</sub> = 0.671), suggesting that a small true effect of temperature on work performance cannot be entirely ruled out.</p>
+<div id="fig-cat" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/cat_test_compact.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: CAT performance across temperature conditions. (a) Individual participant CAT scores (points) for the full sample plotted against average session temperatures; (b) CAT scores for the bottom and top 25% of performers shown as a function of average measured session air temperatures and corrected by the calculated mean learning effect for visual display; reported statistics derive from a linear mixed-effects model (see <a href="#sec-high-low" class="quarto-xref">Section&nbsp;3.3.1.1</a>).
+</figcaption>
+</figure>
+</div>
+<p>CAT scores rose consistently across the four repeated administrations, independent of session temperature (see Appendix, “CAT Learning Effect”), motivating the use of a linear mixed-effects model with trial number as a covariate, rather than a simple mean correction, in the performer-subgroup analysis below.</p>
+<section id="sec-high-low" class="level4" data-number="3.3.1.1">
+<h4 data-number="3.3.1.1" class="anchored" data-anchor-id="sec-high-low"><span class="header-section-number">3.3.1.1</span> High and low performing participants</h4>
+<p>To explore whether higher and lower performing individuals responded differently to temperature, the analysis was repeated separately for the top and bottom 25% of participants by average CAT score (see <a href="#fig-cat" class="quarto-xref">Figure&nbsp;3</a>). Because subgroup membership was not known before the experiment, session order was less balanced within these groups than in the full cohort (see <a href="#tbl-order-combined" class="quarto-xref">Table&nbsp;6</a>). A linear mixed-effects model was fitted for each subgroup with session type and trial number (1–4) as fixed effects and a random intercept per participant, estimating the temperature effect after accounting for individual-level learning. Scores displayed in <a href="#fig-cat" class="quarto-xref">Figure&nbsp;3</a> (b) retain the mean-corrected adjustment described in the Appendix (“Learning Effect”) for visual interpretability; all reported statistics derive from the LMM.</p>
+<p>Low performers (<a href="#fig-cat" class="quarto-xref">Figure&nbsp;3</a> (b), left) exhibited a narrow range of mean scores, from 29.1 to 31.5 points. The LMM for this subgroup revealed no statistically significant effect of temperature on CAT scores after controlling for trial number (F(3, 50) = 0.849, p = 0.474, ηp² = 0.048). Equivalence testing likewise did not confirm a negligible effect at the pre-specified bound (p<sub>equiv</sub> = 0.451).</p>
+<p>High performers (<a href="#fig-cat" class="quarto-xref">Figure&nbsp;3</a> (b), right) showed a wider spread in mean scores, from 65 to 72.8 points. In contrast to the full sample, the LMM identified a statistically significant effect of temperature on CAT scores in this subgroup after controlling for trial number (F(3, 54) = 5.689, p = 0.00185, ηp² = 0.24), representing a large effect by <span class="citation" data-cites="cohenStatisticalPowerAnalysis1988">Cohen (<a href="#ref-cohenStatisticalPowerAnalysis1988" role="doc-biblioref">1988</a>)</span> criteria (ηp² &gt; 0.14). Equivalence testing confirmed that the observed effect substantially exceeded the pre-specified negligible bound (p<sub>equiv</sub> = 0.995). Exploratory post-hoc pairwise comparisons on mean-corrected scores (Bonferroni correction) indicated that the largest difference was between the 21C and 27C conditions (p<sub>adj</sub> = 0.131). This finding suggests that higher-performing individuals may be more sensitive to temperature variations, even though the broader sample showed no statistically significant performance changes.</p>
+<p>As a sensitivity check, a linear mixed-effects model with a random intercept per participant applied to the full sample yielded consistent results (F(3, 222) = 1.732, p = 0.161), confirming robustness to the analytical approach.</p>
+</section>
+</section>
+<section id="pebl-test-battery" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="pebl-test-battery"><span class="header-section-number">3.3.2</span> PEBL Test Battery</h3>
+<p>PEBL Test Battery performance across the five cognitive domains (<a href="#tbl-cognitive-domains" class="quarto-xref">Table&nbsp;3</a>) is summarized in <a href="#fig-pebl" class="quarto-xref">Figure&nbsp;4</a>, which visualizes changes by temperature condition relative to the 21°C baseline. Overall, cognitive performance remained stable across temperature conditions, with mean changes ranging from a minimum of -0.1% at 23°C to a maximum of 1.2% at 25°C, both relative to baseline. These small fluctuations were inconsistent across domains and showed no systematic temperature-related pattern.</p>
+<p>Attention showed the largest variability across conditions, with changes reaching 5.1% at 25°C alongside substantial inter-individual variability, followed by Decision Making (up to 3.1% at 27°C). Working Memory and Executive Function changes were comparably modest, and Processing Speed was the most consistent domain.</p>
+<p>Detailed test-by-test results and statistical analyses are provided in <a href="#tbl-pebl-detailed" class="quarto-xref">Table&nbsp;5</a> in the Appendix. After excluding parameters that showed ceiling effects or negligible variation across conditions (changes &lt; 1%), none of the retained PEBL metrics showed a statistically significant effect of session temperature (all p &gt; 0.11 (70)), with percent changes relative to the 21°C condition generally small (±1–5%).</p>
+<p>To provide a more interpretable summary across the large number of individual metrics, domain-level composite scores were computed by z-scoring each metric across all participants and sessions, reversing the sign for lower-is-better measures (response times, variability, and move-count metrics), and averaging within domain (Decision Making excluded, as BART measures risk-taking tendency rather than performance accuracy). Domain-level repeated-measures ANOVAs confirmed no statistically significant temperature effect for any of the four retained domains (n = 70; Greenhouse-Geisser corrected where sphericity was violated — Executive Function, Attention, and Processing Speed; see <a href="#tbl-pebl-domain" class="quarto-xref">Table&nbsp;4</a>). Equivalence testing confirmed a negligible temperature effect only for Working Memory (p<sub>equiv</sub> = 0.0491); for the remaining three domains, equivalence at the ηp² = 0.01 threshold could not be confirmed, so small effects of temperature on work performance in these domains cannot be fully ruled out.</p>
+<div class="cell">
+<div id="tbl-pebl-domain" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pebl-domain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Domain-level PEBL composite results. Z-score composites were computed by averaging direction-corrected metrics within each cognitive domain. Greenhouse-Geisser corrections applied where sphericity was violated (df₁ &lt; 3). Decision Making excluded (BART measures behavioural tendency, not performance accuracy). p<sub>equiv</sub> from equivalence F-test with bound η<sub>p</sub>² = 0.01.
+</figcaption>
+<div aria-describedby="tbl-pebl-domain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 4%">
+<col style="width: 28%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 12%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Domain</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">F(df<sub>1</sub>, df<sub>2</sub>)</th>
+<th style="text-align: right;">p</th>
+<th style="text-align: right;">η<sub>p</sub>²</th>
+<th style="text-align: right;">p<sub>equiv</sub></th>
+<th style="text-align: right;">Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Working Memory</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">F(3, 207) = 0.229</td>
+<td style="text-align: right;">0.876</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">0.0491</td>
+<td style="text-align: right;">Yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Executive Function</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">F(2.42, 167) = 1.726</td>
+<td style="text-align: right;">0.174</td>
+<td style="text-align: right;">0.024</td>
+<td style="text-align: right;">0.6050</td>
+<td style="text-align: right;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Attention</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">F(2.27, 157) = 1.131</td>
+<td style="text-align: right;">0.330</td>
+<td style="text-align: right;">0.016</td>
+<td style="text-align: right;">0.4360</td>
+<td style="text-align: right;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Processing Speed</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">F(1.93, 133) = 0.865</td>
+<td style="text-align: right;">0.420</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">0.3720</td>
+<td style="text-align: right;">No</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Analysis of high and low performing participants (top and bottom 25% by CAT score) similarly revealed no statistically significant temperature effects in the PEBL battery for either subgroup, with no evidence of differential sensitivity; these results are not discussed further.</p>
+<div id="fig-pebl" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pebl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/pebl_domain_compact.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pebl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Performance changes across cognitive domains by temperature condition. Each panel shows the distribution of individual participant performance changes (relative to 21°C baseline) for one cognitive domain. Boxplots represent the median and interquartile range, with individual points showing participant-level averages across all metrics within that domain. Positive values indicate improved performance. Despite some variability, no systematic, statistically significant temperature effects emerged across any cognitive domain.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="physiological-measurements-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="physiological-measurements-1"><span class="header-section-number">3.4</span> Physiological measurements</h2>
+<section id="hand-skin-temperature-and-heart-rate" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="hand-skin-temperature-and-heart-rate"><span class="header-section-number">3.4.1</span> Hand skin temperature and heart rate</h3>
+<p><a href="#fig-tsk-hr" class="quarto-xref">Figure&nbsp;5</a> summarizes the physiological responses across the four temperature conditions. Hand skin temperature increased systematically with session temperature, ranging from 29.8°C in the 21°C condition to 33.8°C in the 27°C condition, with intermediate values of 31.3°C at 23°C and 32.8°C at 25°C. In addition to these differences in average levels, the trajectories show a noticeable downward drift in the cooler conditions: during both the 21°C and 23°C sessions, hand skin temperature gradually declined after the acclimatisation period, reaching values in the high 20s by the end of the exposure. This pattern suggests progressive peripheral cooling under the lower-temperature conditions, consistent with thermoregulatory vasoconstriction. An alternative explanation is a declining metabolic rate due to prolonged sedentary work. However, since no systematic decline was observed in the warmer conditions, where vasodilation would likely dominate any metabolic effect, thermoregulatory vasoconstriction remains the more plausible interpretation.</p>
+<p>Mean heart rate remained relatively stable across the lower temperatures (76 bpm and 76 bpm in 21C and 23C, respectively) and increased modestly at the higher temperatures (79 bpm in 25C, 81 bpm in 27C), with comparable variation across conditions (SD range: 11–10 bpm).</p>
+<div id="fig-tsk-hr" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tsk-hr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/tsk_hr.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tsk-hr-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Physiological responses across temperature conditions: (a) Mean non-dominant hand skin temperature across all participants by session type, shown over the session duration (starting after the 30-min acclimatisation period); (b) Distribution of participants’ mean heart rate (bpm) grouped by session type.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="rmssd" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="rmssd"><span class="header-section-number">3.4.2</span> RMSSD</h3>
+<p><a href="#fig-rmssd" class="quarto-xref">Figure&nbsp;6</a> presents Root Mean Square of Successive Differences (RMSSD) values across the four temperature conditions. RMSSD captures short-term, beat-to-beat changes in cardiac activity by quantifying variability between successive R–R intervals. RMSSD is widely used as a marker of vagally mediated heart rate variability, with higher values generally associated with stronger parasympathetic tone; however, it is not a pure readout of parasympathetic activity and may also be influenced by respiratory variation, cognitive task demands, and the level at which recordings are summarized.</p>
+<p>Mean RMSSD decreased with increasing temperature, ranging from 45 ms in the 21°C condition to 34 ms at 27°C (intermediate values: 41 ms at 23°C, 35 ms at 25°C; SD range: 30–27–25–24 ms). Statistical analysis confirmed a significant effect of temperature on RMSSD (F(3, 224.2) = 22.06, p &lt; .001).</p>
+<p>To examine whether this temperature effect was independent of heart rate changes, a sensitivity analysis was conducted following the recommendations of <span class="citation" data-cites="degeusShouldHeartRate2019">Geus et al. (<a href="#ref-degeusShouldHeartRate2019" role="doc-biblioref">2019</a>)</span>. After controlling for heart rate as a covariate, the temperature effect on RMSSD remained significant after adjustment (F(3, 228.6) = 7.02, p &lt; .001), suggesting that the association between temperature and RMSSD is not attributable to heart rate changes alone.</p>
+<p>Together, the RMSSD, heart rate, and skin temperature findings indicate a consistent, temperature-dependent shift in autonomic and thermoregulatory state across the four conditions, with the RMSSD effect persisting after heart rate adjustment.</p>
+<div id="fig-rmssd" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rmssd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/rmssd.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rmssd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: RMSSD across temperature conditions: Distribution of session-level RMSSD values for the four temperature conditions. Each point represents an individual participant’s median RMSSD value for a single session. Higher RMSSD indicates greater parasympathetic activity and lower stress levels. The progressive decrease in RMSSD with increasing temperature remained significant after controlling for heart rate, indicating autonomic responses to elevated ambient temperature.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="discussion" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Discussion</h1>
+<p>The present study replicated the experimental protocol of <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">Porras-Salazar et al. (<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">2024</a>)</span> in a temperate climate and with a larger participant sample to assess whether indoor temperature within a typical office range influences office work performance (OWP). Overall, the findings align closely with the Singapore study: no statistically significant effect of temperature on cognitive performance was found across the 21–27°C range, despite measurable physiological differences across conditions. <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">Porras-Salazar et al. (<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">2024</a>)</span> reported the same pattern in their tested range of 23–29°C. These results add to the growing body of controlled experimental evidence suggesting that, within commonly encountered office temperatures and across different climatic regions, the effect of thermal conditions on office work performance is limited.</p>
+<p>Across the full sample, no statistically significant difference in Cognitive Ability Test (CAT) performance was found for the four temperature conditions, though the equivalence test did not confirm this difference to be negligible, so a small true effect cannot be ruled out. This is in line with the non-significant result reported by the Singapore study for the almost identical test battery and supports previous laboratory work reporting weak or task-specific effects within comparable temperature ranges <span class="citation" data-cites="maulaEffectSlightlyWarm2016">(<a href="#ref-maulaEffectSlightlyWarm2016" role="doc-biblioref">Maula et al., 2016</a>)</span>. Performance on the neuropsychological tests (PEBL) showed no statistically significant effect of temperature in any of the four cognitive domains examined, with no systematic patterns across executive control, working memory, attention, or processing speed. Equivalence testing confirmed this difference was negligible only for working memory, so small effects in the remaining three domains cannot be fully ruled out. These results are consistent with earlier studies in which short, structured laboratory tasks showed limited sensitivity to moderate thermal changes <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024 maulaEffectSlightlyWarm2016">(<a href="#ref-maulaEffectSlightlyWarm2016" role="doc-biblioref">Maula et al., 2016</a>; <a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">Porras-Salazar et al., 2024</a>)</span>.</p>
+<p>Several studies cited in the Introduction reported measurable effects that this replication did not, and the specific conditions under which those effects emerged might help explain the divergence. <span class="citation" data-cites="tanabeIndoorTemperatureProductivity2007">Tanabe et al. (<a href="#ref-tanabeIndoorTemperatureProductivity2007" role="doc-biblioref">2007</a>)</span> exposed participants to temperatures up to 33°C across a series of climate-chamber experiments and found effects that were themselves contradictory across task types. Notably, where cerebral blood flow increased significantly at the highest temperature, task performance did not differ significantly from cooler conditions, indicating that physiological cost can rise without a corresponding behavioural decrement, a pattern consistent with the physiology–performance dissociation reported below. <span class="citation" data-cites="maulaEffectSlightlyWarm2016">Maula et al. (<a href="#ref-maulaEffectSlightlyWarm2016" role="doc-biblioref">2016</a>)</span> compared 23°C with 29°C, two degrees above the upper bound tested here, and found a significant decrement on only one of six administered tasks (an n-back working memory task), with self-assessed performance unaffected by temperature. <span class="citation" data-cites="gengImpactThermalEnvironment2017">Geng et al. (<a href="#ref-gengImpactThermalEnvironment2017" role="doc-biblioref">2017</a>)</span> tested a considerably wider 16–28°C range (n = 21). Their own fitted quadratic model, evaluated specifically within 21–27°C, predicts relative productivity varying by only around three percentage points across that band, indicating that the significant overall relationship they reported was driven primarily by conditions outside the range examined here.</p>
+<p>The most direct challenge comes from <span class="citation" data-cites="lanCognitivePerformanceWas2022">Lan et al. (<a href="#ref-lanCognitivePerformanceWas2022" role="doc-biblioref">2022</a>)</span>, whose 24–28°C range overlaps almost entirely with the present study. Several methodological differences, however, complicate a direct comparison. To hold perceived thermal comfort constant across their three conditions, clothing insulation was reduced from 0.7 to 0.5 clo and a ceiling fan was switched on only at the highest temperature (raising air velocity from below 0.1 m/s to 1.0 m/s). Relative humidity also varied between conditions (59–66%). The authors themselves note that the reported performance trend “should not be interpreted as being due only to differences in air temperature,” and the non-monotonic pattern observed for several tasks, with larger decrements at the intermediate than at the highest temperature, is consistent with the compensatory increase in air movement partially offsetting the effect of the warmest condition. Participants in that study were paid a fixed hourly rate with no performance-based incentive, and the sample (n = 36) was less than half the size of the present study. By contrast, the present design held clothing, air velocity, and relative humidity fixed across all four conditions, used performance-based incentives to encourage sustained effort, and enrolled a larger sample with confirmed statistical power (n = 75; 84.1% power at α = 0.05 to detect an effect as small as ηp² = 0.01). These design choices isolate the effect of air temperature more directly from co-varying compensatory adjustments, at the cost of not addressing the related but distinct question of whether performance can be preserved when comfort itself is actively maintained as temperature rises.</p>
+<p>A notable exception emerged among the highest-performing CAT participants (top quartile), for whom a statistically significant and large effect of temperature on performance was identified (ηp² = 0.24, exceeding the &gt;0.14 large-effect threshold). Scores were highest at cooler conditions and declined at warmer conditions, with the largest difference between the coolest and warmest sessions. Importantly, this finding was produced by an LMM that models each participant’s learning trajectory individually so the result is not an artefact of how learning was handled. No statistically significant temperature effect was detected for low performers or in the PEBL tests, even among high-performing participants.</p>
+<p>This finding aligns with the broader pattern identified by <span class="citation" data-cites="linEffectsTemperatureWork2025">Lin et al. (<a href="#ref-linEffectsTemperatureWork2025" role="doc-biblioref">2025</a>)</span> in their meta-analysis of the typical office temperature range: pooled across included studies, a significant performance decrement above 25°C emerged for cognitively demanding (“skilled”) tasks (SMD = -0.15, p = 0.02) but not for routine tasks (SMD = -0.01, not significant), and only for exposures exceeding one hour, a threshold the present 165-minute sessions exceed. The CAT, which imposes uniform time pressure across a heterogeneous set of questions, plausibly falls into the more demanding category, whereas the PEBL subtests are more bounded and self-paced. High-performing participants, operating closer to their cognitive ceiling under time-constrained conditions, may also have less spare capacity to buffer environmental perturbations than participants performing in the middle or lower range, distinguishing the role of task demand from that of performer level as potential moderators of the temperature–performance relationship. This subgroup, however, comprised only around 18 participants, was identified post hoc rather than pre-specified, and effect sizes estimated from subsamples of this size carry considerable uncertainty. The finding is therefore best read as consistent with, rather than confirmatory of, the task-demand and exposure-duration moderators identified in the wider literature, and as motivation for a pre-registered replication rather than a settled result.</p>
+<p>The disconnect between physiological activation and cognitive performance that did not significantly vary with temperature warrants consideration; similar physiological trends have been reported in other controlled studies <span class="citation" data-cites="lanCognitivePerformanceWas2022">(<a href="#ref-lanCognitivePerformanceWas2022" role="doc-biblioref">Lan et al., 2022</a>)</span>. The dorsal hand skin temperature data reflect active thermoregulatory responses across conditions, with vasodilation at warmer temperatures driving progressively higher peripheral temperatures. Within the 21–27°C range studied here, these thermoregulatory demands appear to have been manageable without a statistically significant effect on cognitive output. This interpretation aligns with the Maximal Adaptability Model’s prediction of a central adaptive zone in which compensatory mechanisms are sufficient to maintain performance, in contrast to conditions beyond this zone where physiological demands overwhelm available resources. The absence of significant performance effects across the 21–27°C range is consistent with these conditions falling within the adaptive zone proposed by the model. Whether 27°C constitutes the upper boundary of this zone cannot be determined from the present data alone, as temperatures above 27°C were not tested.</p>
+<p>Taken together, the results contribute to the growing body of evidence suggesting that wider office temperature ranges do not strongly influence office work performance within typical setpoint bands. This conclusion aligns with <span class="citation" data-cites="porras-salazarMetaanalysis35Studies2021">Porras-Salazar et al. (<a href="#ref-porras-salazarMetaanalysis35Studies2021" role="doc-biblioref">2021</a>)</span>, who found that none of the widely cited models linking continuous temperature to performance validated well against independent data (R² as low as 0.05), casting doubt on the existence of a simple, generalisable dose-response function relating the two. A more recent meta-analysis using a categorical, moderator-based approach rather than a continuous curve reached a more qualified conclusion. <span class="citation" data-cites="linEffectsTemperatureWork2025">Lin et al. (<a href="#ref-linEffectsTemperatureWork2025" role="doc-biblioref">2025</a>)</span> found a small but significant pooled decrement in performance above 25°C, concentrated in cognitively demanding tasks and only after exposures longer than one hour. These two syntheses are not necessarily in conflict: the absence of a reliable continuous dose-response function does not preclude a real, but small and context-dependent, effect under specific conditions. The pattern observed here, no statistically significant effect across the full sample alongside a large but tentative effect confined to a demanding task among high performers, sits comfortably within this more qualified picture rather than confirming or refuting either synthesis outright. The present replication also reinforces concerns that much of the variation reported in earlier studies may stem from uncontrolled confounders, including compensatory adjustments to clothing and air movement, rather than air temperature itself <span class="citation" data-cites="zhangEffectsModerateThermal2019">(<a href="#ref-zhangEffectsModerateThermal2019" role="doc-biblioref">Zhang et al., 2019</a>)</span>. By controlling these design factors and enrolling a larger, well-powered sample than most comparable studies, this study provides a more tightly isolated and higher-confidence estimate of the air-temperature effect under realistic office conditions in a temperate climate.</p>
+<section id="limitations-and-outlook" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="limitations-and-outlook"><span class="header-section-number">4.1</span> Limitations and outlook</h2>
+<p>Several limitations warrant consideration. Participants were mostly young, healthy adults, and the tasks were relatively short and discrete compared with the sustained, multifaceted work encountered in real offices. Although exposure duration (165 min) is longer than in many laboratory studies, it approximates a focused morning or afternoon work block rather than a full workday. The motivational context of the study, in which participants received performance-based incentives, may also differ from natural office settings where motivation varies between individuals and over time. Whether occupants in real offices would maintain the same stable performance under thermally non-neutral conditions remains an open question. The absence of a resting ECG screening means that potential cardiac arrhythmias were not identified prior to participation, which could have influenced HRV-derived metrics for a small number of participants. Gradual adaptation to wider temperature ranges over longer durations was not examined. The performer subgroup analyses (top and bottom 25% by average CAT score) were not pre-specified and each comprised approximately 18 participants, limiting statistical power; as noted above, the high-performer effect should be treated as exploratory rather than confirmatory. In addition, some neuropsychological tests exhibited ceiling effects, limiting their ability to detect performance changes. Although the tested temperature range reflects typical setpoints in U.S. office buildings, effects at higher temperatures, particularly above 27°C, remain outside the scope of this experiment. Higher temperatures compensated by increased air movement were not tested.</p>
+<p>Despite these limitations, the findings strengthen the evidence that office work performance is robust within the thermal conditions typically found in mechanically cooled office environments. They also support ongoing efforts to broaden acceptable temperature bands as a strategy for reducing HVAC energy use without compromising performance <span class="citation" data-cites="kentEnergySavingsThermal2023 millerCoolingEnergySavings2021">(<a href="#ref-kentEnergySavingsThermal2023" role="doc-biblioref">Kent et al., 2023</a>; <a href="#ref-millerCoolingEnergySavings2021" role="doc-biblioref">Miller et al., 2021</a>)</span>, particularly in temperate climates where cooling set points are often set more conservatively than thermal comfort alone would require <span class="citation" data-cites="mendellIndoorThermalFactors2009">(<a href="#ref-mendellIndoorThermalFactors2009" role="doc-biblioref">Mendell &amp; Mirer, 2009</a>)</span>. Practical implementation of broader set point bands should nonetheless consider occupant comfort preferences and satisfaction alongside cognitive performance, as thermal discomfort can affect motivation, absenteeism, and self-reported productivity even when objective performance metrics remain stable <span class="citation" data-cites="fiskEstimatesImprovedProductivity1997 maulaEffectSlightlyWarm2016">(<a href="#ref-fiskEstimatesImprovedProductivity1997" role="doc-biblioref">Fisk &amp; Rosenfeld, 1997</a>; <a href="#ref-maulaEffectSlightlyWarm2016" role="doc-biblioref">Maula et al., 2016</a>)</span>. Future research should extend these results through longer exposure periods, more complex or continuous task paradigms, and coordinated, multi-site studies using shared protocols, as recommended by <span class="citation" data-cites="porras-salazarMetaanalysis35Studies2021">Porras-Salazar et al. (<a href="#ref-porras-salazarMetaanalysis35Studies2021" role="doc-biblioref">2021</a>)</span>.</p>
+</section>
+</section>
+<section id="conclusions" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Conclusions</h1>
+<p>The present study replicated a recent controlled experiment conducted in Singapore to examine whether indoor temperature affects short-term office work performance under typical office conditions. No statistically significant effect of temperature on performance was found on either the Cognitive Ability Test or a battery of neuropsychological tasks across the 21–27°C range, during a single 165-minute session of structured, incentivized task work, closely mirroring the original study with greater statistical power. Among the highest-performing quartile of Cognitive Ability Test participants, a statistically significant, large-magnitude temperature-related effect (ηp² = 0.24) was observed. This result was derived from a subsample of approximately 18 participants, and was not replicated in the neuropsychological tests, so it should be treated as exploratory rather than confirmatory.</p>
+<p>Physiological responses varied predictably with temperature without corresponding cognitive performance differences, consistent with the Maximal Adaptability Model, and strengthen the external validity of the Singapore findings through replication in a different climatic and cultural context. Together, the present experiment and previous studies lend support to modestly widening HVAC set point ranges within the 21–27°C band, with the caveat that occupant comfort and satisfaction, individual differences in temperature sensitivity, and the demands of longer-duration or more varied real-world work remain open questions that a short-term, controlled study of this kind cannot resolve.</p>
+</section>
+<section id="data-availability" class="level1 unnumbered">
+<h1 class="unnumbered">Data availability</h1>
+<p>The datasets generated and analyzed during the study will be made available in a Dryad Digital Repository with publication of this manuscript. The analysis code will be made available in a public GitHub repository, together with a README file describing the dataset and how to use it.</p>
+</section>
+<section id="declaration-of-generative-ai-and-ai-assisted-technologies-in-the-writing-process" class="level1 unnumbered">
+<h1 class="unnumbered">Declaration of Generative AI and AI-assisted technologies in the writing process</h1>
+<p>During the preparation of this work, the authors utilized the chatbot Claude to enhance the language and readability of the content. Subsequently, they reviewed and edited the material as required, while maintaining full accountability for the publication’s content.</p>
+</section>
+<section id="appendix" class="level1 unnumbered">
+<h1 class="unnumbered">Appendix</h1>
+
+
+
+
+</section>
+
+<section id="references" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> References</h1>
+<div class="::::">
+
+</div>
+
+</section>
+
+<div id="quarto-appendix" class="default"><section id="sec-instrumentation" class="level2 unnumbered appendix"><h2 class="anchored quarto-appendix-heading">Instrumentation</h2><div class="quarto-appendix-contents">
+
+<p>A sensor mast located at the room center measured air temperature (−10 to 50°C, ±0.1°C) and air speed (0.05 to 5.0 m/s, ±0.02 m/s) at four heights (0.1 m, 0.6 m, 1.1 m, and 1.7 m) using the AirDistSys 5000 (Sensor Electronic, Poland, air velocity: 0.05-5 m/s, accuracy: ±0.02 m/s ±2% of reading; temperature: -10 to +50°C, accuracy: ±0.2°C, sampling interval: 10 s). In addition, two Atmocube (Atmotech Inc., United States) IEQ monitoring units were placed at representative desk locations to measure air temperature (-40 to +125°C, ± 0.5°C), relative humidity (0 to 100%RH, ± 2 %RH ), CO<sub>2</sub> (0 to 5000 ppm, ± 50 ppm + 2.5% of reading at standard room levels), particulate matter (0 to 1000 μg/m3, ±5 μg/m³ + 5 % m.v. at 0 to 100 μg/m³), light intensity (0 to 60000 lux, ±10%), and background noise levels (30 to 100 dB, ±2dB) across the room.</p>
+</div></section><section id="sec-pebl-descriptions" class="level2 unnumbered appendix"><h2 class="anchored quarto-appendix-heading">PEBL Test Descriptions</h2><div class="quarto-appendix-contents">
+
+<p>In the Corsi Blocks test, a sequence of blocks lights up one at a time on screen and participants reproduce the sequence from memory, with sequences increasing in length until errors occur, measuring visuospatial working memory capacity. The Berg Card Sorting Test (BCST) requires participants to sort cards according to a rule that changes periodically without warning, measuring cognitive flexibility and set-shifting. The Flanker Task presents a central arrow flanked by congruent or incongruent arrows and asks participants to respond to the central arrow direction, measuring selective attention and inhibitory control. The Tower of London requires participants to rearrange colored beads into a target configuration in the minimum number of moves, measuring planning and problem-solving. The Trail Making test includes a simple condition (connect numbered dots sequentially, measuring processing speed) and a mixed condition (alternate between numbered and lettered dots, measuring set-shifting and executive function). The Balloon Analog Risk Task (BART) presents a simulated balloon that participants may pump for monetary rewards; they must decide when to stop before the balloon bursts, measuring risk-taking behavior and decision making. Full descriptions of the Paired Associates and Match-to-Sample tasks are provided in <span class="citation" data-cites="porras-salazarEffectIndoorTemperature2024">Porras-Salazar et al. (<a href="#ref-porras-salazarEffectIndoorTemperature2024" role="doc-biblioref">2024</a>)</span>.</p>
+</div></section><section id="cat-learning-effect" class="level2 unnumbered appendix"><h2 class="anchored quarto-appendix-heading">CAT Learning Effect</h2><div class="quarto-appendix-contents">
+
+<p>To examine whether participants improved with repeated exposure to the CAT, data were reorganized by trial number, independent of session temperature. <a href="#fig-cat-learning" class="quarto-xref">Figure&nbsp;7</a> illustrates a clear upward trend across the four administrations of the test. Mean scores increased from 41.6 points on the first attempt (SD = 15) to 54.9 points by the fourth attempt (SD = 14.7). Intermediate scores followed the same trajectory, rising to 48.3 points at the second trial and 51.3 points at the third. This pattern indicates a consistent learning effect: participants became more familiar with the test format and content over time, which led to higher CAT scores regardless of the temperature condition under which the test was completed. Prior to the experiment, participants attended an introductory session during which they completed two condensed CAT practice test (6 minutes instead of 12 minutes) of comparable structure and difficulty to mitigate the learning effect during the experimental sessions. These practice sessions were anonymized and therefore not included in this analysis.</p>
+<p>This clear presence of a learning effect in CAT performance reinforces the importance of balancing session order across participants. Because repeated exposure to the test was expected to produce performance improvements independent of temperature, the study was designed so that the four temperature conditions were evenly distributed across all possible session positions. Each participant received a unique session sequence, ensuring that no temperature was disproportionately associated with earlier or later test administrations. In addition, although each CAT administration used a different set of items, the tests followed the same structure, timing, and difficulty profile, reducing the risk that test version differences would influence performance. This approach allowed genuine temperature effects to be separated from performance gains driven purely by familiarity with the test.</p>
+<div id="fig-cat-learning" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cat-learning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figs/cat_learning.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cat-learning-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Learning effect in CAT. Changes in CAT scores across trials 1–4, where each point represents one test result, show a clear learning effect represented by higher scores in consecutive trials.
+</figcaption>
+</figure>
+</div>
+</div></section><section id="pebl-details" class="level2 unnumbered appendix"><h2 class="anchored quarto-appendix-heading">PEBL Details</h2><div class="quarto-appendix-contents">
+
+<p><a href="#tbl-pebl-detailed" class="quarto-xref">Table&nbsp;5</a> presents the complete test-by-test results for all PEBL metrics that were retained after excluding parameters with ceiling effects or negligible variation. For each metric, median values with interquartile ranges (IQR) are reported for each temperature condition, the percentage change relative to the 21°C baseline across the three warmer conditions, and repeated-measures ANOVA results testing for temperature effects. As shown in the table, no retained parameter exhibited statistically significant temperature effects (all p &gt; 0.11 (70)). Performance changes were generally small (within ±1–5%) and showed no consistent directional pattern across related metrics or cognitive domains. These results indicate that cognitive performance across the tested domains (Working Memory, Executive Function, Attention, Processing Speed, and Decision Making) remained stable across the 21–27°C temperature range. Although some individual metrics showed slightly larger descriptive shifts at specific temperatures (e.g., attention-related metrics at 25°C), these changes were not statistically reliable and occurred alongside opposite-direction changes in related tasks, suggesting they reflect normal test-retest variability rather than systematic temperature effects.</p>
+<div class="cell">
+<div id="tbl-pebl-detailed" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-pebl-detailed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Detailed PEBL test battery results by temperature condition. For each retained metric, the table shows the median (IQR) performance at each temperature, percentage changes relative to 21°C baseline, and repeated-measures ANOVA results. Metrics are organized by cognitive domain and test. All p-values exceeded 0.05, indicating no statistically significant temperature effects on any measured cognitive parameter.
+</figcaption>
+<div aria-describedby="tbl-pebl-detailed-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div class="tabwid"><style>.cl-b2c012b4{}.cl-b2bbc592{font-family:'Helvetica';font-size:6pt;font-weight:bold;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b2bbc59c{font-family:'Arial';font-size:5pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b2bd35c6{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2bd35c7{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:3pt;padding-top:3pt;padding-left:3pt;padding-right:3pt;line-height: 1;background-color:transparent;}.cl-b2bd3f62{width:0.5in;background-color:rgba(229, 229, 229, 1.00);vertical-align: top;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bd3f63{width:0.75in;background-color:rgba(229, 229, 229, 1.00);vertical-align: top;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 1pt solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bd3f6c{width:0.5in;background-color:transparent;vertical-align: top;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bd3f6d{width:0.75in;background-color:transparent;vertical-align: top;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bd3f6e{width:0.5in;background-color:transparent;vertical-align: top;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bd3f6f{width:0.75in;background-color:transparent;vertical-align: top;border-bottom: 1pt solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-b2c012b4"><thead><tr style="overflow-wrap:break-word;"><th class="cl-b2bd3f62"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">test</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">domain</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">metric</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">parameter</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">summary_21C</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">summary_23C</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">summary_25C</span></p></th><th class="cl-b2bd3f62"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">summary_27C</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">performance_change</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">p_value</span></p></th><th class="cl-b2bd3f63"><p class="cl-b2bd35c6"><span class="cl-b2bbc592">effect_size</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">bart</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">decision_making</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">behavior</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Mean Pumps</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">10.67 (6.61, 14.72, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">10.39 (4.86, 14.20, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">11.37 (6.56, 15.02, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">10.93 (5.19, 15.04, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -2.6%; 25C: +6.5%; 27C: +2.4%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.87 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.003</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">bart</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">decision_making</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">behavior</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Total Pumps</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">958.00 (595.25, 1325.00, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">935.75 (437.00, 1278.25, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1023.00 (590.50, 1352.50, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">983.50 (466.50, 1353.00, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -2.3%; 25C: +6.8%; 27C: +2.7%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.90 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.003</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">bcst</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">executive_function</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">speed</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Mean Reaction Time</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1046.38 (911.86, 1182.50, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1037.99 (915.97, 1239.85, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1033.53 (887.27, 1222.12, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1031.94 (923.04, 1218.89, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -0.8%; 25C: -1.2%; 27C: -1.4%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.73 (69)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.005</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">bcst</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">executive_function</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Perseverative Errors</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">11.50 (10.00, 14.12, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">12.00 (10.50, 14.25, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">12.00 (10.50, 13.50, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">11.00 (10.50, 13.50, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +4.3%; 25C: +4.3%; 27C: -4.3%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.36 (69)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.015</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">bcst</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">executive_function</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">efficiency</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Number of Trials</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">120.00 (114.38, 128.00, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">121.00 (115.25, 125.50, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">121.00 (114.50, 128.00, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">120.00 (113.50, 126.50, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +0.8%; 25C: +0.8%; 27C: +0.0%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.76 (69)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.005</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">bcst</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">executive_function</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">consistency</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">SD Reaction Time</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">487.19 (384.25, 704.27, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">507.88 (402.39, 743.93, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">496.72 (375.17, 759.58, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">492.89 (364.92, 706.84, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +4.2%; 25C: +2.0%; 27C: +1.2%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.38 (69)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.012</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">corsi</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">working_memory</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Mean Span</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">6.25 (5.50, 7.00, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">6.00 (5.50, 7.00, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">6.25 (5.75, 7.00, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">6.25 (5.50, 6.75, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -4.0%; 25C: +0.0%; 27C: +0.0%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.69 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.007</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">corsi</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">working_memory</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Memory Span</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">75.00 (54.00, 96.00, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">72.50 (56.50, 96.00, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">78.00 (60.00, 96.00, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">75.00 (60.00, 94.00, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -3.3%; 25C: +4.0%; 27C: +0.0%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.85 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.004</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">corsi</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">working_memory</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Total Correct Trials</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">10.50 (9.00, 12.00, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">10.00 (9.00, 12.00, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">10.50 (9.50, 12.00, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">10.50 (9.00, 11.50, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -4.8%; 25C: +0.0%; 27C: +0.0%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.69 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.007</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">flanker</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">speed</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Mean Response Time</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">408.83 (385.18, 444.29, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">415.04 (394.79, 448.31, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">408.33 (387.99, 439.06, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">415.70 (383.44, 438.61, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +1.5%; 25C: -0.1%; 27C: +1.7%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.51 (68)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.011</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">flanker</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Correct Responses</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">153.75 (149.88, 156.62, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">153.50 (149.62, 156.50, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">153.00 (151.00, 156.00, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">153.00 (149.50, 156.00, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -0.2%; 25C: -0.5%; 27C: -0.5%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.73 (68)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.006</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">flanker</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Errors</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">6.25 (3.38, 10.12, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">6.50 (3.50, 10.38, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">7.00 (4.00, 9.00, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">7.00 (4.00, 10.50, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +4.0%; 25C: +12.0%; 27C: +12.0%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.73 (68)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.006</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">matchtosample</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">speed</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Mean Response Time</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1121.44 (928.01, 1363.06, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1153.58 (980.41, 1502.93, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1167.97 (982.55, 1387.72, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1181.57 (1010.50, 1426.68, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +2.9%; 25C: +4.1%; 27C: +5.4%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.20 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.023</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">matchtosample</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Correct Responses</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">27.50 (25.50, 28.62, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">28.00 (26.50, 29.00, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">27.00 (26.00, 28.50, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">27.50 (25.50, 29.00, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +1.8%; 25C: -1.8%; 27C: +0.0%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.68 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.005</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">matchtosample</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Errors</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">2.50 (1.00, 3.62, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">2.00 (1.00, 3.50, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">3.00 (1.50, 4.00, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">2.50 (1.00, 4.50, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -20.0%; 25C: +20.0%; 27C: +0.0%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.50 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.011</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">paired</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">speed</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Mean Response Time</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">3221.85 (2746.24, 4195.60, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">3304.93 (2813.00, 4256.44, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">3175.17 (2607.81, 4104.60, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">3326.06 (2705.46, 4443.59, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +2.6%; 25C: -1.4%; 27C: +3.2%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.83 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.004</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">paired</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Correct Responses</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">22.00 (19.38, 23.50, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">22.50 (19.75, 24.00, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">22.50 (18.50, 23.50, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">22.50 (18.00, 24.00, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +2.3%; 25C: +2.3%; 27C: +2.3%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.28 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.017</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">paired</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">attention</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">accuracy</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Errors</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">2.00 (0.50, 5.12, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1.50 (0.00, 4.25, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1.50 (0.50, 5.50, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">1.50 (0.00, 6.00, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -25.0%; 25C: -25.0%; 27C: -25.0%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.59 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.009</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">ptrails</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">executive_function</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">speed</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Mixed: Total Time</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">29.75 (29.00, 32.00, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">30.00 (28.50, 32.00, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">29.50 (28.50, 32.00, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">30.50 (29.00, 32.00, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +0.8%; 25C: -0.8%; 27C: +2.5%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.65 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.007</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">ptrails</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">processing_speed</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">speed</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Letters: Total Time</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">31.00 (29.00, 33.50, N = 76)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">32.00 (29.50, 34.62, N = 78)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">32.00 (29.50, 35.50, N = 76)</span></p></td><td class="cl-b2bd3f6c"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">31.50 (29.00, 35.00, N = 77)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: +3.2%; 25C: +3.2%; 27C: +1.6%</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.56 (70)</span></p></td><td class="cl-b2bd3f6d"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.009</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bd3f6e"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">tol</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">executive_function</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">speed</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">Total Time</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">123.49 (88.83, 149.68, N = 76)</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">120.89 (96.83, 159.00, N = 78)</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">127.30 (93.85, 170.50, N = 76)</span></p></td><td class="cl-b2bd3f6e"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">124.26 (92.12, 174.81, N = 77)</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">23C: -2.1%; 25C: +3.1%; 27C: +0.6%</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.11 (70)</span></p></td><td class="cl-b2bd3f6f"><p class="cl-b2bd35c7"><span class="cl-b2bbc59c">0.029</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div></section><section id="session-order-distribution" class="level1 unnumbered appendix"><h2 class="anchored quarto-appendix-heading">Session Order Distribution</h2><div class="quarto-appendix-contents">
+
+<p><a href="#tbl-order-combined" class="quarto-xref">Table&nbsp;6</a> shows the distribution of temperature conditions across session positions (1st through 4th) for the full cohort, the high-performer subgroup (top 25% by average CAT score), and the low-performer subgroup (bottom 25%). Each cell reports the number of participants who experienced a given temperature condition at a given position. The full cohort shows near-perfect balance by design. Because subgroup membership was not known before the experiment, session order could not be balanced within these groups, and some imbalance is visible in the subgroup rows. The LMM approach used for the subgroup analyses (trial number as a fixed covariate) statistically accounts for position-related learning effects regardless of their distribution across conditions.</p>
+<div class="cell">
+<div id="tbl-order-combined" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-order-combined-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Session order distribution by group. Values show the number of participants who experienced each temperature condition at each session position (1st–4th), for the full cohort, high performers (top 25% by average CAT score), and low performers (bottom 25%).
+</figcaption>
+<div aria-describedby="tbl-order-combined-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Group</th>
+<th style="text-align: left;">Temperature</th>
+<th style="text-align: right;">Position 1</th>
+<th style="text-align: right;">Position 2</th>
+<th style="text-align: right;">Position 3</th>
+<th style="text-align: right;">Position 4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Full cohort</td>
+<td style="text-align: left;">21C</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Full cohort</td>
+<td style="text-align: left;">23C</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Full cohort</td>
+<td style="text-align: left;">25C</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Full cohort</td>
+<td style="text-align: left;">27C</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">High performers</td>
+<td style="text-align: left;">21C</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">High performers</td>
+<td style="text-align: left;">23C</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">High performers</td>
+<td style="text-align: left;">25C</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">High performers</td>
+<td style="text-align: left;">27C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Low performers</td>
+<td style="text-align: left;">21C</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Low performers</td>
+<td style="text-align: left;">23C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Low performers</td>
+<td style="text-align: left;">25C</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Low performers</td>
+<td style="text-align: left;">27C</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-aronSensoryProcessingSensitivityIts1997" class="csl-entry" role="listitem">
+Aron, E. N., &amp; Aron, A. (1997). Sensory-<span>Processing</span> <span>Sensitivity</span> and <span>Its</span> <span>Relation</span> to <span>Introversion</span> and <span>Emotionality</span>. <em>Journal of Personality and Social Psychology</em>, <em>73</em>(2), 345–368. <a href="https://doi.org/10.1037/0022-3514.73.2.345">https://doi.org/10.1037/0022-3514.73.2.345</a>
+</div>
+<div id="ref-ashraeANSIASHRAEStandard2023" class="csl-entry" role="listitem">
+ASHRAE. (2023). <em><span>ANSI</span>/<span>ASHRAE</span> <span>Standard</span> 55-2023: <span>Thermal</span> <span>Environmental</span> <span>Conditions</span> for <span>Human</span> <span>Occupancy</span></em>. American Society of Heating, Refrigerating; Air-Conditioning Engineers.
+</div>
+<div id="ref-baumanDevelopmentControlledEnvironment1988" class="csl-entry" role="listitem">
+Bauman, Fred., &amp; Arens, E. A. (1988). <em>The development of a controlled environment chamber for the physical and subjective assessment of human comfort in office environments / fred bauman and edward arens.</em> Center for Architectural Research. <a href="https://escholarship.org/uc/item/0mn5485n">https://escholarship.org/uc/item/0mn5485n</a>
+</div>
+<div id="ref-bonnerEffectsMonetaryIncentives2002" class="csl-entry" role="listitem">
+Bonner, S. E., &amp; Sprinkle, G. B. (2002). The effects of monetary incentives on effort and task performance: Theories, evidence, and a framework for research. <em>Accounting, Organizations and Society</em>, <em>27</em>(4), 303–345. <a href="https://doi.org/10.1016/S0361-3682(01)00052-6">https://doi.org/10.1016/S0361-3682(01)00052-6</a>
+</div>
+<div id="ref-campbellCanWeDisregard2021" class="csl-entry" role="listitem">
+Campbell, H., &amp; Lakens, D. (2021). Can we disregard the whole model? <span>Omnibus</span> non-inferiority tests for <span>R2</span>, <span>R2</span>-change, and the omnibus <span>F</span>-test using the open source <span>R</span> package ’equivalencetests’. <em>British Journal of Mathematical and Statistical Psychology</em>, <em>74</em>(1), 62–86. <a href="https://doi.org/10.1111/bmsp.12201">https://doi.org/10.1111/bmsp.12201</a>
+</div>
+<div id="ref-cohenStatisticalPowerAnalysis1988" class="csl-entry" role="listitem">
+Cohen, J. (1988). <em>Statistical power analysis for the behavioral sciences / jacob cohen.</em> (2nd ed.). L. Erlbaum Associates.
+</div>
+<div id="ref-daweComparisonMeanRadiant2020" class="csl-entry" role="listitem">
+Dawe, M., Raftery, P., Woolley, J., Schiavon, S., &amp; Bauman, F. (2020). Comparison of mean radiant and air temperatures in mechanically-conditioned commercial buildings from over 200,000 field and laboratory measurements. <em>Energy and Buildings</em>, <em>206</em>, 109582. <a href="https://doi.org/10.1016/j.enbuild.2019.109582">https://doi.org/10.1016/j.enbuild.2019.109582</a>
+</div>
+<div id="ref-diamond2013" class="csl-entry" role="listitem">
+Diamond, A., &amp; Fiske, S. (2013). Executive functions. <em>Annual Review of Psychology</em>, <em>64</em>(1), 135–168. <a href="https://doi.org/10.1146/annurev-psych-113011-143750">https://doi.org/10.1146/annurev-psych-113011-143750</a>
+</div>
+<div id="ref-dienerSatisfactionLifeScale1985" class="csl-entry" role="listitem">
+Diener, E., Emmons, R. A., Larsen, R. J., &amp; Griffin, S. (1985). The <span>Satisfaction</span> <span>With</span> <span>Life</span> <span>Scale</span>. <em>Journal of Personality Assessment</em>, <em>49</em>(1), 71–75. <a href="https://doi.org/10.1207/s15327752jpa4901_13">https://doi.org/10.1207/s15327752jpa4901_13</a>
+</div>
+<div id="ref-fiskEstimatesImprovedProductivity1997" class="csl-entry" role="listitem">
+Fisk, W. J., &amp; Rosenfeld, A. H. (1997). Estimates of improved productivity and health from better indoor environments. <em>Indoor Air</em>, <em>7</em>(3), 158–172. <a href="https://doi.org/10.1111/j.1600-0668.1997.t01-1-00002.x">https://doi.org/10.1111/j.1600-0668.1997.t01-1-00002.x</a>
+</div>
+<div id="ref-foldvarylicinaDevelopmentASHRAEGlobal2018" class="csl-entry" role="listitem">
+Földváry Ličina, V., Cheung, T., Zhang, H., Dear, R. de, Parkinson, T., Arens, E., Chun, C., Schiavon, S., Luo, M., Brager, G., Li, P., Kaam, S., Adebamowo, M. A., Andamon, M. M., Babich, F., Bouden, C., Bukovianska, H., Candido, C., Cao, B., … Zhou, X. (2018). Development of the <span>ASHRAE</span> <span>Global</span> <span>Thermal</span> <span>Comfort</span> <span>Database</span> <span>II</span>. <em>Building and Environment</em>, <em>142</em>, 502–512. <a href="https://doi.org/10.1016/j.buildenv.2018.06.022">https://doi.org/10.1016/j.buildenv.2018.06.022</a>
+</div>
+<div id="ref-gengImpactThermalEnvironment2017" class="csl-entry" role="listitem">
+Geng, Y., Ji, W., Lin, B., &amp; Zhu, Y. (2017). The impact of thermal environment on occupant <span>IEQ</span> perception and productivity. <em>Building and Environment</em>, <em>121</em>, 158–167. <a href="https://doi.org/10.1016/j.buildenv.2017.05.022">https://doi.org/10.1016/j.buildenv.2017.05.022</a>
+</div>
+<div id="ref-degeusShouldHeartRate2019" class="csl-entry" role="listitem">
+Geus, E. J. C. de, Gianaros, P. J., Brindle, R. C., Jennings, J. R., &amp; Berntson, G. G. (2019). Should heart rate variability be <span>“corrected”</span> for heart rate? Biological, quantitative, and interpretive considerations. <em>Psychophysiology</em>, <em>56</em>(2), e13287. <a href="https://doi.org/doi.org/10.1111/psyp.13287">https://doi.org/doi.org/10.1111/psyp.13287</a>
+</div>
+<div id="ref-goslingVeryBriefMeasure2003" class="csl-entry" role="listitem">
+Gosling, S. D., Rentfrow, P. J., &amp; Swann, W. B. (2003). A very brief measure of the <span>Big</span>-<span>Five</span> personality domains. <em>Journal of Research in Personality</em>, <em>37</em>(6), 504–528. <a href="https://doi.org/10.1016/S0092-6566(03)00046-1">https://doi.org/10.1016/S0092-6566(03)00046-1</a>
+</div>
+<div id="ref-hancockDynamicModelStress1989" class="csl-entry" role="listitem">
+Hancock, P. A. (1989). A dynamic model of stress and sustained attention. <em>Human Factors</em>, <em>31</em>(5), 519–537. <a href="https://doi.org/10.1177/001872088903100503">https://doi.org/10.1177/001872088903100503</a>
+</div>
+<div id="ref-humphreysOutdoorTemperaturesComfort1978" class="csl-entry" role="listitem">
+Humphreys, M. (1978). Outdoor temperatures and comfort indoors. <em>Batiment International, Building Research and Practice</em>, <em>6</em>(2), 92–92. https://doi.org/<a href="https://doi.org/10.1080/09613217808550656">https://doi.org/10.1080/09613217808550656</a>
+</div>
+<div id="ref-hunterWonderlicScholasticLevel1989" class="csl-entry" role="listitem">
+Hunter, J. E. (1989). <em>The <span>Wonderlic</span> <span>Scholastic</span> <span>Level</span> <span>Exam</span> as a <span>Predictor</span> of <span>Training</span> <span>Success</span> and <span>Job</span> <span>Performance</span></em>. Wonderlic (E. F.) Personnel Test, Inc.
+</div>
+<div id="ref-kassambaraRstatix2023" class="csl-entry" role="listitem">
+Kassambara, A. (2023). <em>Rstatix: Pipe-friendly framework for basic statistical tests</em>. <a href="https://rpkgs.datanovia.com/rstatix/">https://rpkgs.datanovia.com/rstatix/</a>
+</div>
+<div id="ref-kentEnergySavingsThermal2023" class="csl-entry" role="listitem">
+Kent, M. G., Huynh, N. K., Mishra, A. K., Tartarini, F., Lipczynska, A., Li, J., Sultan, Z., Goh, E., Karunagaran, G., Natarajan, A., &amp; al., et. (2023). Energy savings and thermal comfort in a zero energy office building with fans in singapore. <em>Building and Environment</em>, <em>243</em>, 110674. https://doi.org/<a href="https://doi.org/10.1016/j.buildenv.2023.110674">https://doi.org/10.1016/j.buildenv.2023.110674</a>
+</div>
+<div id="ref-kuznetsovaLmerTestPackageTests2017" class="csl-entry" role="listitem">
+Kuznetsova, A., Brockhoff, P. B., &amp; Christensen, R. H. B. (2017). lmerTest package: Tests in linear mixed effects models. <em>Journal of Statistical Software</em>, <em>82</em>(13), 1–26. <a href="https://doi.org/10.18637/jss.v082.i13">https://doi.org/10.18637/jss.v082.i13</a>
+</div>
+<div id="ref-lanCognitivePerformanceWas2022" class="csl-entry" role="listitem">
+Lan, L., Tang, J., Wargocki, P., Wyon, D. P., &amp; Lian, Z. (2022). Cognitive performance was reduced by higher air temperature even when thermal comfort was maintained over the 24–28°<span>C</span> range. <em>Indoor Air</em>, <em>32</em>(1), e12916–n/a. <a href="https://doi.org/10.1111/ina.12916">https://doi.org/10.1111/ina.12916</a>
+</div>
+<div id="ref-LezakMurielDeutsch2012Na" class="csl-entry" role="listitem">
+Lezak, M. D. (2012). <em>Neuropsychological assessment</em> (Fifth edition.). Oxford University Press.
+</div>
+<div id="ref-linEffectsTemperatureWork2025" class="csl-entry" role="listitem">
+Lin, X., Guo, C., Wargocki, P., Tanabe, S., Tham, K. W., &amp; Lan, L. (2025). The effects of temperature on work performance in the typical office environment: <span>A</span> meta-analysis of the current evidence. <em>Building and Environment</em>, <em>269</em>, 112488. <a href="https://doi.org/10.1016/j.buildenv.2024.112488">https://doi.org/10.1016/j.buildenv.2024.112488</a>
+</div>
+<div id="ref-maulaEffectSlightlyWarm2016" class="csl-entry" role="listitem">
+Maula, H., Hongisto, V., Östman, L., Haapakangas, A., Koskela, H., &amp; Hyönä, J. (2016). The effect of slightly warm temperature on work performance and comfort in open-plan offices - a laboratory study. <em>Indoor Air</em>, <em>26</em>(2), 286–297. <a href="https://doi.org/10.1111/ina.12209">https://doi.org/10.1111/ina.12209</a>
+</div>
+<div id="ref-mckinneyPython2018" class="csl-entry" role="listitem">
+McKinney, W. (2018). <em>Python for data analysis</em> (2nd ed.). O’Reilly Media.
+</div>
+<div id="ref-mendellIndoorThermalFactors2009" class="csl-entry" role="listitem">
+Mendell, M. J., &amp; Mirer, A. G. (2009). Indoor thermal factors and symptoms in office workers: Findings from the US EPA BASE study. <em>Indoor Air</em>, <em>19</em>(4), 291–302. <a href="https://doi.org/10.1111/j.1600-0668.2009.00592.x">https://doi.org/10.1111/j.1600-0668.2009.00592.x</a>
+</div>
+<div id="ref-millerCoolingEnergySavings2021" class="csl-entry" role="listitem">
+Miller, D., Raftery, P., Nakajima, M., Salo, S., Graham, L. T., Peffer, T., Delgado, M., Zhang, H., Brager, G., Douglass-Jaimes, D., &amp; al., et. (2021). Cooling energy savings and occupant feedback in a two year retrofit evaluation of 99 automated ceiling fans staged with air conditioning. <em>Energy and Buildings</em>, <em>251</em>, 111319. <a href="https://doi.org/10.1016/j.enbuild.2021.111319">https://doi.org/10.1016/j.enbuild.2021.111319</a>
+</div>
+<div id="ref-muellerPsychologyExperimentBuilding2014" class="csl-entry" role="listitem">
+Mueller, S. T., &amp; Piper, B. J. (2014). The <span>Psychology</span> <span>Experiment</span> <span>Building</span> <span>Language</span> (<span>PEBL</span>) and <span>PEBL</span> <span>Test</span> <span>Battery</span>. <em>Journal of Neuroscience Methods</em>, <em>222</em>, 250–259. <a href="https://doi.org/10.1016/j.jneumeth.2013.10.024">https://doi.org/10.1016/j.jneumeth.2013.10.024</a>
+</div>
+<div id="ref-NOAA_NWS_SF_Climate_2025" class="csl-entry" role="listitem">
+NOAA. (2025). <em>NOAA national weather service, western region: San francisco weather and climate data</em>. <a href="https://www.weather.gov/wrh/climate?wfo=mtr" class="uri">https://www.weather.gov/wrh/climate?wfo=mtr</a>.
+</div>
+<div id="ref-popperLogicScientificDiscovery2002" class="csl-entry" role="listitem">
+Popper, K. R. (2002). <em>The logic of scientific discovery / karl popper.</em> Routledge Classics.
+</div>
+<div id="ref-porras-salazarMetaanalysis35Studies2021" class="csl-entry" role="listitem">
+Porras-Salazar, J. A., Schiavon, S., Wargocki, P., Cheung, T., &amp; Tham, K. W. (2021). Meta-analysis of 35 studies examining the effect of indoor temperature on office work performance. <em>Building and Environment</em>, <em>203</em>, 108037. <a href="https://doi.org/10.1016/j.buildenv.2021.108037">https://doi.org/10.1016/j.buildenv.2021.108037</a>
+</div>
+<div id="ref-porras-salazarEffectIndoorTemperature2024" class="csl-entry" role="listitem">
+Porras-Salazar, J. A., Tartarini, F., &amp; Schiavon, S. (2024). The effect of indoor temperature on work performance of fifty-eight people in a simulated office environment. <em>Building and Environment</em>, <em>263</em>, 111813. <a href="https://doi.org/10.1016/j.buildenv.2024.111813">https://doi.org/10.1016/j.buildenv.2024.111813</a>
+</div>
+<div id="ref-schmidtShallWeReally2009" class="csl-entry" role="listitem">
+Schmidt, S. (2009). Shall we really do it again?: The powerful concept of replication is neglected in the social sciences. <em>Review of General Psychology</em>, <em>13</em>(2), 90–100. <a href="https://doi.org/10.1037/a0015108">https://doi.org/10.1037/a0015108</a>
+</div>
+<div id="ref-shafferOverviewHeartRate2017" class="csl-entry" role="listitem">
+Shaffer, F., &amp; Ginsberg, J. P. (2017). An overview of heart rate variability metrics and norms. <em>Frontiers in Public Health</em>, <em>5</em>, 258. <a href="https://doi.org/10.3389/fpubh.2017.00258">https://doi.org/10.3389/fpubh.2017.00258</a>
+</div>
+<div id="ref-shermanCompendiumNeuropsychologicalTests2022" class="csl-entry" role="listitem">
+Sherman, E., Tan, J., &amp; Hrabok, M. (2022). A compendium of neuropsychological tests : Fundamentals of neuropsychological assessment and test reviews for clinical practice / elisabeth sherman, jing tan, and marianne hrabok. In <em>A compendium of neuropsychological tests : Fundamentals of neuropsychological assessment and test reviews for clinical practice</em> (Fourth edition.). Oxford University Press.
+</div>
+<div id="ref-tanabeIndoorTemperatureProductivity2007" class="csl-entry" role="listitem">
+Tanabe, S., Nishihara, N., &amp; Haneda, M. (2007). Indoor temperature, productivity, and fatigue in office tasks. <em>HVAC&amp;R Research</em>, <em>13</em>(4), 623–633. <a href="https://doi.org/10.1080/10789669.2007.10390975">https://doi.org/10.1080/10789669.2007.10390975</a>
+</div>
+<div id="ref-wickhamGgplot2ElegantGraphics2016" class="csl-entry" role="listitem">
+Wickham, H. (2016). <em>ggplot2: <span>Elegant</span> <span>Graphics</span> for <span>Data</span> <span>Analysis</span></em>. Springer-Verlag. <a href="https://ggplot2.tidyverse.org">https://ggplot2.tidyverse.org</a>
+</div>
+<div id="ref-Wickham2019-tidyverse" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to the <span class="nocase">tidyverse</span>. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+</div>
+<div id="ref-xiongMeasuringWhatMatters2026" class="csl-entry" role="listitem">
+Xiong, J., Cheung, T., Fukawa, Y., Noelle, N., Parkinson, T., Kim, J., Tanabe, S., Dear, R. de, &amp; Schiavon, S. (2026). Measuring what matters: A benchmarking system for occupant satisfaction with workspace environments. <em>Building and Environment</em>, <em>287</em>, 113783. <a href="https://doi.org/10.1016/j.buildenv.2025.113783">https://doi.org/10.1016/j.buildenv.2025.113783</a>
+</div>
+<div id="ref-zhangEffectsModerateThermal2019" class="csl-entry" role="listitem">
+Zhang, F., Dear, R. de, &amp; Hancock, P. (2019). Effects of moderate thermal environments on cognitive performance: <span>A</span> multidisciplinary review. <em>Applied Energy</em>, <em>236</em>, 760–777. <a href="https://doi.org/10.1016/j.apenergy.2018.12.005">https://doi.org/10.1016/j.apenergy.2018.12.005</a>
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

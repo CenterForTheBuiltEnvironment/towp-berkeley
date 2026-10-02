@@ -1,0 +1,76 @@
+subject_id,age,sex,height_m,weight_kg,degree,session_order,session_start,general_health,health_routines_exercise,health_routines_caffein,health_routines_alcohol,health_routines_smoking
+002,53,female,1.52,59,bachelors,c25_c21_c23_c27,c25,no,4-6 times a week,daily,2-3 times a week,daily
+005,22,male,1.7,57,bachelors,c23_c27_c21_c25,c23,no,once a week,never,once a week,2-3 times a week
+006,22,female,1.73,64,high school,c23_c21_c27_c25,c23,nan,2-3 times a week,once a week,2-3 times a week,never
+007,22,female,1.65,59,high school,c23_c25_c27_c21,c23,no,once a week,once a week,never,never
+008,22,unspecified,1.65,68,high school,c23_c25_c27_c21,c23,nan,nan,nan,nan,nan
+009,28,male,1.73,68,bachelors,c23_c25_c21_c27,c23,no,4-6 times a week,daily,once a week,never
+010,21,female,1.52,57,high school,c23_c25_c21_c27,c23,"i am more sensitive to higher temperatures and less able to thermoregulate (due to hypothyroidism) but it is nothing serious. additionally, i am relatively sensitive to sensory inputs (esp. sounds and noises) and get overstimulated in intense situations (due to mental health predispositions) but those reactions are manageable and not connected to physical health.",2-3 times a week,daily,never,never
+011,23,female,1.52,54,bachelors,c21_c25_c23_c27,c21,no,never,never,once a week,never
+012,30,male,1.83,75,masters,c25_c23_c27_c21,c25,my blood pressure is slightly higher than normal,4-6 times a week,never,2-3 times a week,never
+014,35,male,1.7,70,bachelors,c25_c27_c21_c23,c25,nan,once a week,daily,once a week,never
+018,22,female,1.52,66,high school,c25_c27_c21_c23,c25,no,once a week,4-6 times a week,once a week,never
+019,23,female,1.7,91,high school,c21_c23_c25_c27,c21,asthma,never,2-3 times a week,once a week,never
+020,26,female,1.6,49,bachelors,c21_c27_c23_c25,c21,nan,once a week,once a week,never,never
+022,56,male,1.83,79,high school,c25_c21_c23_c27,c25,nan,never,daily,4-6 times a week,daily
+023,24,male,1.75,66,bachelors,c21_c23_c25_c27,c21,no,once a week,daily,never,never
+024,22,female,1.68,59,high school,c27_c23_c21_c25,c27,nan,2-3 times a week,once a week,never,never
+025,25,male,1.75,75,bachelors,c21_c25_c23_c27,c21,nan,2-3 times a week,4-6 times a week,2-3 times a week,once a week
+027,21,female,1.65,49,high school,c25_c21_c27_c23,c25,no,2-3 times a week,once a week,never,never
+028,23,female,1.57,58,high school,c25_c21_c27_c23,c25,no,4-6 times a week,never,never,never
+030,21,male,1.73,64,high school,c27_c23_c21_c25,c27,nan,2-3 times a week,2-3 times a week,once a week,never
+031,30,male,1.7,85,bachelors,c27_c23_c21_c25,c27,no,once a week,never,once a week,never
+032,23,male,1.73,70,high school,c25_c27_c23_c21,c25,no,4-6 times a week,2-3 times a week,once a week,never
+033,52,female,1.52,86,high school,c23_c25_c27_c21,c23,nond,once a week,daily,once a week,once a week
+034,21,male,2.08,82,high school,c27_c21_c23_c25,c27,no,4-6 times a week,2-3 times a week,once a week,never
+035,21,female,1.7,55,high school,c27_c21_c23_c25,c27,no,2-3 times a week,once a week,never,never
+036,19,female,1.65,59,high school,c27_c21_c25_c23,c27,nan,2-3 times a week,2-3 times a week,once a week,never
+037,22,male,1.73,85,high school,c21_c27_c23_c25,c21,no,once a week,once a week,never,never
+038,22,male,1.83,82,bachelors,c21_c25_c27_c23,c21,nan,4-6 times a week,once a week,never,never
+039,23,female,1.68,59,bachelors,c23_c21_c27_c25,c23,no,2-3 times a week,daily,once a week,never
+040,22,male,1.7,79,high school,c21_c25_c27_c23,c21,nan,4-6 times a week,never,2-3 times a week,never
+041,22,female,1.63,91,high school,c21_c23_c27_c25,c21,no,2-3 times a week,daily,2-3 times a week,once a week
+042,39,male,1.6,60,ph.d.,c23_c27_c25_c21,c23,no,2-3 times a week,never,never,never
+043,24,male,1.7,59,bachelors,c25_c27_c23_c21,c25,"temperature, air quality and noise level",once a week,2-3 times a week,never,never
+046,22,female,1.52,54,high school,c25_c23_c21_c27,c25,nan,daily,daily,2-3 times a week,never
+047,21,male,1.75,68,high school,c25_c23_c21_c27,c25,nan,never,once a week,never,never
+049,22,female,1.52,73,high school,c23_c21_c25_c27,c23,nan,once a week,2-3 times a week,never,never
+050,21,male,1.7,68,bachelors,c23_c27_c25_c21,c23,nan,2-3 times a week,daily,once a week,never
+051,24,female,1.52,54,high school,c23_c25_c27_c21,c23,no,daily,never,never,never
+053,24,male,1.83,64,bachelors,c27_c25_c23_c21,c27,not particularly,once a week,never,once a week,never
+054,23,unspecified,1.65,82,high school,c21_c27_c25_c23,c21,no,4-6 times a week,2-3 times a week,2-3 times a week,once a week
+055,25,female,1.65,70,bachelors,c23_c25_c27_c21,c23,nan,4-6 times a week,once a week,once a week,never
+056,32,male,1.75,91,bachelors,c27_c25_c23_c21,c27,no,never,daily,never,never
+057,21,female,1.55,66,high school,c21_c27_c25_c23,c21,nan,2-3 times a week,2-3 times a week,never,never
+058,22,female,1.57,82,high school,c21_c27_c25_c23,c21,nan,2-3 times a week,once a week,never,never
+060,22,male,1.52,64,high school,c27_c25_c21_c23,c27,nan,4-6 times a week,never,never,never
+062,22,female,1.55,61,high school,c27_c21_c25_c23,c27,nan,4-6 times a week,daily,never,never
+064,23,female,1.65,79,bachelors,c27_c23_c25_c21,c27,nan,once a week,once a week,never,never
+065,26,female,1.63,79,bachelors,c25_c21_c23_c27,c25,not applicable,once a week,daily,2-3 times a week,never
+066,29,male,1.8,63,bachelors,c25_c23_c21_c27,c25,nan,4-6 times a week,daily,once a week,never
+069,28,female,1.65,68,bachelors,c21_c25_c27_c23,c21,nope,once a week,daily,never,never
+071,29,male,1.75,72,bachelors,c21_c23_c27_c25,c21,no,4-6 times a week,never,never,never
+072,46,female,1.6,57,masters,c23_c21_c27_c25,c23,"lupus, rheumatoid arthritis, pulmonary fibrosis",2-3 times a week,daily,once a week,never
+074,22,male,1.65,98,bachelors,c25_c21_c27_c23,c25,nan,never,2-3 times a week,once a week,never
+075,23,female,1.57,52,bachelors,c25_c23_c27_c21,c25,no,daily,never,never,never
+076,21,female,1.52,57,high school,c25_c23_c21_c27,c25,no,2-3 times a week,once a week,never,never
+077,32,female,1.55,56,bachelors,c23_c27_c25_c21,c23,nan,4-6 times a week,2-3 times a week,once a week,never
+078,26,female,1.65,68,bachelors,c23_c25_c21_c27,c23,no,4-6 times a week,4-6 times a week,never,never
+079,25,female,1.75,59,high school,c27_c21_c25_c23,c27,a bit low blood pressure,once a week,once a week,never,never
+080,21,female,1.6,55,high school,c23_c27_c21_c25,c23,no,never,4-6 times a week,once a week,never
+082,30,female,1.57,66,masters,c21_c25_c23_c27,c21,obsessive compulsive disorder (sensitive to loud noise),2-3 times a week,never,once a week,never
+083,21,female,1.52,51,high school,c25_c27_c21_c23,c25,no,4-6 times a week,daily,2-3 times a week,2-3 times a week
+084,22,female,1.65,82,high school,c27_c25_c21_c23,c27,nan,2-3 times a week,2-3 times a week,once a week,never
+085,28,male,1.6,70,high school,c21_c27_c25_c23,c21,nan,2-3 times a week,daily,never,never
+086,21,female,1.6,65,high school,c27_c25_c23_c21,c27,no,2-3 times a week,daily,once a week,never
+087,26,male,1.52,88,masters,c21_c27_c23_c25,c21,no,2-3 times a week,4-6 times a week,once a week,4-6 times a week
+088,25,male,1.75,73,bachelors,c27_c23_c25_c21,c27,prone to allergies/stuffy nose,4-6 times a week,2-3 times a week,never,never
+090,22,male,1.65,89,bachelors,c27_c23_c25_c21,c27,nan,2-3 times a week,2-3 times a week,never,never
+091,22,female,1.6,79,bachelors,c27_c25_c21_c23,c27,hay fever and rhinitis associated with temperature changes,once a week,daily,once a week,never
+092,24,male,1.52,58,high school,c27_c25_c23_c21,c27,no,daily,daily,never,never
+094,29,male,1.83,80,masters,c21_c23_c25_c27,c21,nan,2-3 times a week,never,never,never
+095,33,male,1.68,78,masters,c21_c23_c27_c25,c21,"i think as people from tropical country, im much sensitive if its colder, than most westerner. if its too hot, above my abilty in tropical area i might also easily angered",2-3 times a week,once a week,never,never
+097,29,male,1.8,79,high school,c23_c21_c25_c27,c23,nan,daily,daily,never,never
+098,23,male,1.68,70,masters,c27_c21_c23_c25,c27,no,2-3 times a week,never,never,never
+099,28,male,1.7,61,masters,c25_c27_c23_c21,c25,nan,2-3 times a week,daily,2-3 times a week,never
+100,24,male,1.75,75,bachelors,c21_c23_c25_c27,c21,nan,daily,daily,once a week,never

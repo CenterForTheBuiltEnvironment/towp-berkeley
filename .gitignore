@@ -1,0 +1,22 @@
+# ---- R ----
+.Rproj.user/
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rprofile
+renv/library/
+renv/staging/
+renv/python/
+renv/sandbox/
+
+# ---- Quarto ----
+.quarto/
+*_files/
+*.knit.md
+*.utf8.md
+
+# ---- macOS / general ----
+.DS_Store
+*.log
+*.tmp

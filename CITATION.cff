@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the associated article."
+title: "Indoor Temperature and Office Work Performance in a Temperate Climate"
+type: software
+authors:
+  - family-names: "Kramer"
+    given-names: "Tobias"
+    affiliation: "Center for the Built Environment, University of California, Berkeley"
+  - family-names: "Schiavon"
+    given-names: "Stefano"
+    affiliation: "Center for the Built Environment, University of California, Berkeley"
+repository-code: "https://github.com/CenterForTheBuiltEnvironment/towp-berkeley"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Indoor Temperature and Office Work Performance in a Temperate Climate"
+  authors:
+    - family-names: "Kramer"
+      given-names: "Tobias"
+    - family-names: "Schiavon"
+      given-names: "Stefano"
+  journal: "Buildings and Cities"
+  year: 2026
+  volume: "PLACEHOLDER"
+  pages: "PLACEHOLDER"
+  doi: "PLACEHOLDER — DOI once assigned"

@@ -1,0 +1,19 @@
+session_type,domain,n,mean_change,sd_change,median_change,q1_change,q3_change
+23C,Overall,73,-0.1,NA,-0.1,-0.1,-0.1
+25C,Overall,72,1.2,NA,1.2,1.2,1.2
+27C,Overall,72,0.9,NA,0.9,0.9,0.9
+23C,Working Memory,72,1.2,NA,1.2,1.2,1.2
+25C,Working Memory,69,0.5,NA,0.5,0.5,0.5
+27C,Working Memory,71,1.6,NA,1.6,1.6,1.6
+23C,Executive Function,73,-0.4,NA,-0.4,-0.4,-0.4
+25C,Executive Function,72,-0.3,NA,-0.3,-0.3,-0.3
+27C,Executive Function,72,-1.5,NA,-1.5,-1.5,-1.5
+23C,Attention,67,0.4,NA,0.4,0.4,0.4
+25C,Attention,65,5.1,NA,5.1,5.1,5.1
+27C,Attention,62,2.3,NA,2.3,2.3,2.3
+23C,Processing Speed,73,-0.3,NA,-0.3,-0.3,-0.3
+25C,Processing Speed,72,-0.5,NA,-0.5,-0.5,-0.5
+27C,Processing Speed,72,-0.1,NA,-0.1,-0.1,-0.1
+23C,Decision Making,66,-2,NA,-2,-2,-2
+25C,Decision Making,66,1.5,NA,1.5,1.5,1.5
+27C,Decision Making,64,3.1,NA,3.1,3.1,3.1
