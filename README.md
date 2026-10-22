@@ -3,9 +3,8 @@
 This repository contains the anonymized data, analysis code, and manuscript
 source needed to reproduce the results in:
 
-> Kramer, T., Schiavon, S. et al. "Indoor Temperature and Office Work
-> Performance in a Temperate Climate." `[PLACEHOLDER — journal, year, DOI
-> once available; see CITATION.cff]`
+Kramer, T., & Schiavon, S. (2026). Indoor temperature and office work performance in a temperate climate. Buildings and Cities, 7(1), 1162–1180. https://doi.org/10.5334/bc.876
+
 
 It is a cleaned, public-facing companion to the authors' private working
 repository: it excludes raw data, reviewer/editor correspondence, and
