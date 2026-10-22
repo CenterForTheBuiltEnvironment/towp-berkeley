@@ -80,8 +80,7 @@ objects are available for inline reporting in the manuscript text.
 
 See [`data/README.md`](data/README.md) for a full data dictionary,
 anonymization details, and known limitations of this data tier relative to
-the full (private) pipeline. The dataset is also archived on Dryad:
-`[PLACEHOLDER — add Dryad DOI once minted]`.
+the full (private) pipeline. The dataset is also currently queued for curation on **Dryad** and will be available soon under the following DOI: [https://doi.org/10.5061/dryad.pnvx0k731](https://doi.org/10.5061/dryad.pnvx0k731)
 
 ## Citation
 
